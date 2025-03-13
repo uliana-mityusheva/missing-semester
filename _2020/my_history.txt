@@ -1,0 +1,3496 @@
+uliana@ulianas-macbook-pro python % git clone https://github.com/aniervs/missing-semester.git
+Cloning into 'missing-semester'...
+remote: Enumerating objects: 2406, done.
+remote: Counting objects: 100% (1485/1485), done.
+remote: Compressing objects: 100% (537/537), done.
+remote: Total 2406 (delta 986), reused 948 (delta 948), pack-reused 921 (from 3)
+Receiving objects: 100% (2406/2406), 5.29 MiB | 439.00 KiB/s, done.
+Resolving deltas: 100% (1423/1423), done.
+uliana@ulianas-macbook-pro python % ls
+missing-semester
+uliana@ulianas-macbook-pro python % cd missing-semester 
+uliana@ulianas-macbook-pro missing-semester % ls
+404.html		_config.yml		favicon.ico
+CNAME			_includes		index.md
+Dockerfile		_layouts		lectures.html
+Gemfile			about.md		license.md
+Gemfile.lock		apple-touch-icon.png	robots.txt
+README.md		docker-compose.yml	static
+_2019			favicon-16x16.png
+_2020			favicon-32x32.png
+uliana@ulianas-macbook-pro missing-semester % cd _2020
+uliana@ulianas-macbook-pro _2020 % ls
+command-line.md		editors.md		qa.md
+course-shell.md		files			security.md
+data-wrangling.md	index.html		shell-tools.md
+debugging-profiling.md	metaprogramming.md	version-control.md
+editors-notes.txt	potpourri.md
+uliana@ulianas-macbook-pro _2020 % open /tmp
+uliana@ulianas-macbook-pro _2020 % mkdir /tmp/missing
+uliana@ulianas-macbook-pro _2020 % man touch
+Unknown locale, assuming C
+uliana@ulianas-macbook-pro _2020 % touch /tmp/missing/semester
+uliana@ulianas-macbook-pro _2020 % ls /tmp/missing
+semester
+uliana@ulianas-macbook-pro _2020 % echo 'Write the following into that file, one line at a time:
+#!/bin/sh
+curl --head --silent https://missing.csa         
+quote> 
+quote> 
+uliana@ulianas-macbook-pro _2020 % echo '#!/bin/sh' >> semester 
+uliana@ulianas-macbook-pro _2020 % echo 'curl --head --silent https://missing.csail.mit.edu' >> semester
+uliana@ulianas-macbook-pro _2020 %  cat /tmp/missing/semester
+uliana@ulianas-macbook-pro _2020 % echo '#!/bin/sh' > /tmp/missing/semester
+
+uliana@ulianas-macbook-pro _2020 % echo 'curl --head --silent https://missing.csail.mit.edu' >> /tmp/missing/semester
+
+uliana@ulianas-macbook-pro _2020 % cat /tmp/missing/semester
+
+#!/bin/sh
+curl --head --silent https://missing.csail.mit.edu
+uliana@ulianas-macbook-pro _2020 % ls -l /tmp/missing/semester
+-rw-r--r--  1 uliana  wheel  61 Mar  9 16:50 /tmp/missing/semester
+uliana@ulianas-macbook-pro _2020 % sh /tmp/missing/semester
+HTTP/2 200 
+server: GitHub.com
+content-type: text/html; charset=utf-8
+last-modified: Sat, 01 Feb 2025 18:13:13 GMT
+access-control-allow-origin: *
+etag: "679e6439-205d"
+expires: Sun, 09 Mar 2025 13:02:03 GMT
+cache-control: max-age=600
+x-proxy-cache: MISS
+x-github-request-id: 1CA3:2C08A0:320F758:3278F92:67CD8EF3
+accept-ranges: bytes
+age: 0
+date: Sun, 09 Mar 2025 12:52:03 GMT
+via: 1.1 varnish
+x-served-by: cache-lhr-egll1980094-LHR
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1741524724.563267,VS0,VE88
+vary: Accept-Encoding
+x-fastly-request-id: 7361d0b1a749f1639a7d244b903c68e07093795f
+content-length: 8285
+
+uliana@ulianas-macbook-pro _2020 % chmod +x /tmp/missing/semester
+
+uliana@ulianas-macbook-pro _2020 % ls -l /tmp/missing/semester
+-rwxr-xr-x  1 uliana  wheel  61 Mar  9 16:50 /tmp/missing/semester
+
+uliana@ulianas-macbook-pro _2020 % cd /tmp/missing
+uliana@ulianas-macbook-pro missing % ./semester     
+HTTP/2 200 
+server: GitHub.com
+content-type: text/html; charset=utf-8
+last-modified: Sat, 01 Feb 2025 18:13:13 GMT
+access-control-allow-origin: *
+etag: "679e6439-205d"
+expires: Sun, 09 Mar 2025 13:02:03 GMT
+cache-control: max-age=600
+x-proxy-cache: MISS
+x-github-request-id: 1CA3:2C08A0:320F758:3278F92:67CD8EF3
+accept-ranges: bytes
+age: 213
+date: Sun, 09 Mar 2025 12:55:37 GMT
+via: 1.1 varnish
+x-served-by: cache-lhr-egll1980058-LHR
+x-cache: HIT
+x-cache-hits: 0
+x-timer: S1741524937.050402,VS0,VE2
+vary: Accept-Encoding
+x-fastly-request-id: 676942cacbcbba2e0db57603a807f40feb2570dd
+content-length: 8285
+
+uliana@ulianas-macbook-pro missing % cd ..                                                       
+uliana@ulianas-macbook-pro /tmp % cd ..
+uliana@ulianas-macbook-pro / % ls
+Applications	Users		cores		home		sbin		var
+Library		Volumes		dev		opt		tmp
+System		bin		etc		private		usr
+uliana@ulianas-macbook-pro / % cd home
+uliana@ulianas-macbook-pro /home % ls
+ls: .: Operation not permitted
+uliana@ulianas-macbook-pro /home % cd ..
+uliana@ulianas-macbook-pro / % cd ..
+uliana@ulianas-macbook-pro / % ls
+Applications	Users		cores		home		sbin		var
+Library		Volumes		dev		opt		tmp
+System		bin		etc		private		usr
+uliana@ulianas-macbook-pro / % cd Users 
+uliana@ulianas-macbook-pro /Users % ls
+Shared	uliana
+uliana@ulianas-macbook-pro /Users % cd uliana 
+uliana@ulianas-macbook-pro ~ % ls
+Applications	Documents	Library		Movies		Pictures	PycharmProjects
+Desktop		Downloads	MSAI		Music		Public		quantum-light
+uliana@ulianas-macbook-pro ~ % cd MSAI
+uliana@ulianas-macbook-pro MSAI % ls
+python
+uliana@ulianas-macbook-pro MSAI % cd python 
+uliana@ulianas-macbook-pro python % ld
+ld: warning: platform not specified
+ld: warning: -arch not specified
+ld: warning: No platform min-version specified on command line
+ld: no object files specified
+uliana@ulianas-macbook-pro python % ls
+missing-semester
+uliana@ulianas-macbook-pro python % cd missing-semester 
+uliana@ulianas-macbook-pro missing-semester % cd _2020 
+uliana@ulianas-macbook-pro _2020 % ls
+command-line.md		editors-notes.txt	metaprogramming.md	semester
+course-shell.md		editors.md		potpourri.md		shell-tools.md
+data-wrangling.md	files			qa.md			version-control.md
+debugging-profiling.md	index.html		security.md
+uliana@ulianas-macbook-pro _2020 % sudo echo "$( /tmp/missing/semester )" > ~/last-modified.txt
+
+Password:
+uliana@ulianas-macbook-pro _2020 % nano last-modified.txt
+uliana@ulianas-macbook-pro _2020 % sudo echo "$( /tmp/missing/semester )" > ~/MSAI/python/missing-semester/_2020/last-modified.txt
+
+uliana@ulianas-macbook-pro _2020 % nano last-modified.txt                                      
+uliana@ulianas-macbook-pro _2020 % git log --all --graph --decorate
+* commit f61bdc1d593a5261f4c1851b3e2c3dbb8e446632 (HEAD -> master, origin/master, origin/HEAD)
+| Author: Anish Athalye <me@anishathalye.com>
+| Date:   Sat Feb 1 10:12:19 2025 -0800
+| 
+|     Update CI status URLs
+| 
+* commit 457308e298dd41cffaaab99ea77b645854d5f2f5
+| Author: Anish Athalye <me@anishathalye.com>
+| Date:   Sat Dec 21 08:51:49 2024 -0800
+| 
+|     Add autohotkey.com to ignore list
+|     
+|     Yet another domain that uses Cloudflare's WAF that blocks cURL.
+|   
+*   commit 204fb93bcfbf486b87552451cd754e3c02171ccb
+|\  Merge: ac0d946 3f76dcd
+| | Author: Anish Athalye <me@anishathalye.com>
+| | Date:   Thu Oct 24 09:33:24 2024 -0700
+| | 
+| |     Merge branch 'terryhsuu/update-py-call-graph-link'
+| | 
+| * commit 3f76dcdb059b97d4b79501c6d8bcbd1578953027
+|/  Author: terryhsuu <b09902025@csie.ntu.edu.tw>
+|   Date:   Thu Oct 24 12:18:06 2024 +0800
+|   
+|       Update python call graph link
+| 
+* commit ac0d946efd1b3a92db91371c454f3fea31ad204b
+| Author: Jon Gjengset <jon@thesquareplanet.com>
+| Date:   Sat Oct 19 11:20:17 2024 +0200
+| 
+|     typo
+| 
+* commit 159d10afa59e7dc948a8f316d47170c0fcb5578a
+| Author: Aolin <aolinz@outlook.com>
+| Date:   Fri Aug 9 04:15:28 2024 +0800
+| 
+|     fix typos (#292)
+|     
+|     Signed-off-by: Aolin <aolinz@outlook.com>
+| 
+* commit 74fcc37b6780b467443950a737b067ac9ddda187
+| Author: Anish Athalye <me@anishathalye.com>
+| Date:   Sat Aug 3 07:57:33 2024 -0400
+| 
+|     Fix CI
+|   
+*   commit 937d447d0478fe3e722d9c7da387b528f0838dce
+|\  Merge: ff4683c d77be4f
+| | Author: Jon Gjengset <jon@thesquareplanet.com>
+| | Date:   Sat Jul 20 03:20:04 2024 -0400
+| | 
+| |     Merge pull request #287 from j-s-ashley/ci/add-dependabot
+| |     
+| |     Add dependabot
+| | 
+| * commit d77be4f7e133b73f30888c4ba5a8481474156b43
+| | Author: j-s-ashley <jashley6@vols.utk.edu>
+| | Date:   Thu Jul 11 11:17:10 2024 -0400
+| | 
+| |     Add dependabot
+| | 
+* | commit ff4683c28f33a01f38938b1a7333ef258eed09bc
+| | Author: Jordan <143551418+j-s-ashley@users.noreply.github.com>
+| | Date:   Wed Jul 17 06:06:00 2024 -0400
+| | 
+uliana@ulianas-macbook-pro _2020 % git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	last-modified.txt
+	semester
+
+nothing added to commit but untracked files present (use "git add" to track)
+uliana@ulianas-macbook-pro _2020 % git branch
+* master
+uliana@ulianas-macbook-pro _2020 % git log -1 -- README.md
+
+uliana@ulianas-macbook-pro _2020 % git log -1 -- README.md
+uliana@ulianas-macbook-pro _2020 % git log -1 --pretty=format:"%an" -- README.md
+uliana@ulianas-macbook-pro _2020 % git blame ../_config.yml
+^112ddbd (Anish Athalye 2019-01-04 22:00:31 -0500  1) # Setup
+ac838248 (Anish Athalye 2023-02-19 20:01:43 -0500  2) title: 'Missing Semester'
+d4412ead (Anish Athalye 2019-12-01 21:26:19 -0500  3) url: https://missing.csail.mit.edu
+^112ddbd (Anish Athalye 2019-01-04 22:00:31 -0500  4) 
+^112ddbd (Anish Athalye 2019-01-04 22:00:31 -0500  5) # Settings
+^112ddbd (Anish Athalye 2019-01-04 22:00:31 -0500  6) markdown: kramdown
+^112ddbd (Anish Athalye 2019-01-04 22:00:31 -0500  7) kramdown:
+^112ddbd (Anish Athalye 2019-01-04 22:00:31 -0500  8)   input: GFM
+^112ddbd (Anish Athalye 2019-01-04 22:00:31 -0500  9)   hard_wrap: false
+^112ddbd (Anish Athalye 2019-01-04 22:00:31 -0500 10) highlighter: rouge
+^112ddbd (Anish Athalye 2019-01-04 22:00:31 -0500 11) permalink: /:title/
+^112ddbd (Anish Athalye 2019-01-04 22:00:31 -0500 12) future: true
+^112ddbd (Anish Athalye 2019-01-04 22:00:31 -0500 13) # safe: true # breaks local rendering if enabled
+^112ddbd (Anish Athalye 2019-01-04 22:00:31 -0500 14) timezone: America/New_York
+^112ddbd (Anish Athalye 2019-01-04 22:00:31 -0500 15) analytics:
+1320c3c9 (Anish Athalye 2023-02-12 08:48:11 -0500 16)   tracking_id: G-P7WVHD84D1
+^112ddbd (Anish Athalye 2019-01-04 22:00:31 -0500 17) 
+a88b4eac (Anish Athalye 2020-01-17 15:26:30 -0500 18) collections:
+a88b4eac (Anish Athalye 2020-01-17 15:26:30 -0500 19)   '2019':
+a88b4eac (Anish Athalye 2020-01-17 15:26:30 -0500 20)     output: true
+a88b4eac (Anish Athalye 2020-01-17 15:26:30 -0500 21)   '2020':
+a88b4eac (Anish Athalye 2020-01-17 15:26:30 -0500 22)     output: true
+a88b4eac (Anish Athalye 2020-01-17 15:26:30 -0500 23) 
+^112ddbd (Anish Athalye 2019-01-04 22:00:31 -0500 24) # Excludes
+^112ddbd (Anish Athalye 2019-01-04 22:00:31 -0500 25) exclude:
+^112ddbd (Anish Athalye 2019-01-04 22:00:31 -0500 26)   - README.md
+^112ddbd (Anish Athalye 2019-01-04 22:00:31 -0500 27)   - Gemfile
+^112ddbd (Anish Athalye 2019-01-04 22:00:31 -0500 28)   - Gemfile.lock
+fa309f93 (Anish Athalye 2020-05-16 11:13:27 -0400 29)   - vendor
+uliana@ulianas-macbook-pro _2020 % git log -1 -- ../README.md                   
+commit f61bdc1d593a5261f4c1851b3e2c3dbb8e446632 (HEAD -> master, origin/master, origin/HEAD)
+Author: Anish Athalye <me@anishathalye.com>
+Date:   Sat Feb 1 10:12:19 2025 -0800
+
+    Update CI status URLs
+uliana@ulianas-macbook-pro _2020 % nano passwords.txt
+uliana@ulianas-macbook-pro _2020 % brew install git-filter-repo
+==> Auto-updating Homebrew...
+Adjust how often this is run with HOMEBREW_AUTO_UPDATE_SECS or disable with
+HOMEBREW_NO_AUTO_UPDATE. Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+==> Auto-updated Homebrew!
+Updated 2 taps (homebrew/core and homebrew/cask).
+==> New Formulae
+ad                           garnet                       libpostal                    sdl3_ttf
+adapterremoval               gauth                        libpostal-rest               semver
+algolia                      gdtoolkit                    mac                          sequoia-sqv
+aqtinstall                   gersemi                      martin                       sitefetch
+aqua                         ggh                          md2pdf                       snowflake-cli
+arelo                        git-mob                      mdq                          soft-serve
+async_simple                 globstar                     mox                          sql-formatter
+bacon-ls                     gnome-builder                mummer                       sttr
+bagels                       go@1.23                      nak                          sv2v
+bazel@7                      gomi                         netfetch                     symfony-cli
+bombardier                   gotz                         nom                          taskflow
+bpmnlint                     gowall                       nping                        text-embeddings-inference
+cf-terraforming              havener                      nuitka                       tgpt
+cfnctl                       hcledit                      org-formation                threatcl
+cloud-provider-kind          hishtory                     ov                           tml
+cloudfoundry-cli             hk                           pdfly                        todoist
+code2prompt                  hl                           pgbackrest                   trdsql
+comrak                       hypopg                       pgrx                         typioca
+cot                          i686-elf-grub                pivy                         unciv
+cspell                       identme                      pkl-lsp                      vfkit
+dbg-macro                    iguana                       postgresql-hll               visidata
+dockerfilegraph              immich-go                    punktf                       vscli
+dtsroll                      infisical                    ramalama                     wfa2-lib
+dud                          jira-cli                     ratarmount                   x86_64-elf-grub
+dvr-scan                     jsrepo                       rattler-index                xk6
+dyff                         jupytext                     restish                      yamlfix
+evans                        kafkactl                     reuse                        yices2
+evil-helix                   kapp                         rhai                         yoke
+exomizer                     keeper-commander             rink                         yor
+fancy-cat                    kirimase                     rpds-py                      ytt
+fastly                       koji                         ruby-lsp                     zimfw
+feluda                       largetifftools               rustic                       zlib-ng-compat
+flow-control                 lazyjj                       rustywind                    zns
+fortitude                    lazyjournal                  sby
+foundry                      lazysql                      scryer-prolog
+fricas                       libcdio-paranoia             sdl3_image
+==> New Casks
+autogram                               font-comic-relief                      opera-air
+automounterhelper                      font-sf-mono-nerd-font-ligaturized     oracle-jdk-javadoc@21
+badgeify                               font-source-han-code-jp                pairpods
+batfi                                  font-special-gothic-condensed-one      pareto-security
+block-goose                            font-special-gothic-expanded-one       pdl
+browser-actions                        font-winky-sans                        pinwheel
+candy-crisis                           fuse-t                                 precize
+chatwise                               gologin                                sokim
+cherry-studio                          granola                                structuredlogviewer
+cloudflare-warp@beta                   istatistica-core                       thumbhost3mf
+consul                                 jumpcloud-password-manager             trae
+desktime                               kunkun                                 trae-cn
+focu                                   losslessswitcher                       ua-midi-control
+font-aporetic                          luanti                                 ui-tars
+font-big-shoulders                     macskk                                 veracrypt-fuse-t
+font-big-shoulders-inline              mitti                                  vernier-spectral-analysis
+font-big-shoulders-stencil             nvidia-nsight-compute                  vezer
+font-boldonse                          obscura-vpn                            windsurf@next
+font-bytesized                         open-eid
+
+You have 9 outdated formulae installed.
+
+==> Downloading https://ghcr.io/v2/homebrew/core/git-filter-repo/manifests/2.47.0
+############################################################################################################ 100.0%
+==> Fetching dependencies for git-filter-repo: expat
+==> Downloading https://ghcr.io/v2/homebrew/core/expat/manifests/2.6.4
+############################################################################################################ 100.0%
+==> Fetching expat
+==> Downloading https://ghcr.io/v2/homebrew/core/expat/blobs/sha256:60a7805061d5eb779c8798b8fc3fa0c1cb3063e6786471d
+############################################################################################################ 100.0%
+==> Fetching git-filter-repo
+==> Downloading https://ghcr.io/v2/homebrew/core/git-filter-repo/blobs/sha256:719c848f3c0611b909c5d2c3a603bbe5b29e8
+############################################################################################################ 100.0%
+==> Installing dependencies for git-filter-repo: expat
+==> Installing git-filter-repo dependency: expat
+==> Downloading https://ghcr.io/v2/homebrew/core/expat/manifests/2.6.4
+Already downloaded: /Users/uliana/Library/Caches/Homebrew/downloads/700d5fdfe27a60378ec5801ebcbf598a7f6eeb78be73ddb517b205e6692b42d6--expat-2.6.4.bottle_manifest.json
+==> Pouring expat--2.6.4.arm64_sonoma.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/expat/2.6.4: 23 files, 671.2KB
+==> Installing git-filter-repo
+==> Pouring git-filter-repo--2.47.0.all.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/git-filter-repo/2.47.0: 9 files, 363.8KB
+==> Running `brew cleanup git-filter-repo`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+==> `brew cleanup` has not been run in the last 30 days, running now...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+==> Autoremoving 1 unneeded formula:
+expat
+Uninstalling /opt/homebrew/Cellar/expat/2.6.4... (23 files, 671.2KB)
+Removing: /Users/uliana/Library/Caches/Homebrew/libsndfile--1.2.2... (602.5KB)
+Removing: /Users/uliana/Library/Caches/Homebrew/libnghttp2--1.64.0... (221.9KB)
+Removing: /Users/uliana/Library/Caches/Homebrew/libtasn1--4.19.0... (167.9KB)
+Removing: /Users/uliana/Library/Caches/Homebrew/cairo--1.18.2... (738.5KB)
+Removing: /Users/uliana/Library/Caches/Homebrew/libx11--1.8.10... (2.1MB)
+Removing: /Users/uliana/Library/Caches/Homebrew/aom--3.11.0... (3.9MB)
+Removing: /Users/uliana/Library/Caches/Homebrew/brotli--1.1.0... (374.3KB)
+Removing: /Users/uliana/Library/Caches/Homebrew/flac--1.4.3... (1.1MB)
+Removing: /Users/uliana/Library/Caches/Homebrew/zstd--1.5.6... (758.6KB)
+Removing: /Users/uliana/Library/Caches/Homebrew/little-cms2--2.16... (420.6KB)
+Removing: /Users/uliana/Library/Logs/Homebrew/python@3.13... (2 files, 2KB)
+Removing: /Users/uliana/Library/Logs/Homebrew/openssl@3... (64B)
+Removing: /Users/uliana/Library/Logs/Homebrew/ca-certificates... (64B)
+Removing: /Users/uliana/Library/Logs/Homebrew/python@3.11... (2 files, 2.5KB)
+Removing: /Users/uliana/Library/Logs/Homebrew/pre-commit... (64B)
+uliana@ulianas-macbook-pro _2020 % git-filter-repo --sensitive-data-removal --replace-text passwords.txt
+Aborting: Refusing to destructively overwrite repo history since
+this does not look like a fresh clone.
+  (GIT_DIR must be .git)
+Please operate on a fresh clone instead.  If you want to proceed
+anyway, use --force.
+uliana@ulianas-macbook-pro _2020 % nano passwords.txt                                                   
+uliana@ulianas-macbook-pro _2020 % cd ..                                                                
+uliana@ulianas-macbook-pro missing-semester % git-filter-repo --sensitive-data-removal --replace-text /_2020/passwords.txt
+Traceback (most recent call last):
+  File "/opt/homebrew/bin/git-filter-repo", line 4976, in <module>
+    main()
+    ~~~~^^
+  File "/opt/homebrew/bin/git-filter-repo", line 4968, in main
+    args = FilteringOptions.parse_args(sys.argv[1:])
+  File "/opt/homebrew/bin/git-filter-repo", line 2430, in parse_args
+    args.replace_text = FilteringOptions.get_replace_text(args.replace_text)
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/bin/git-filter-repo", line 2331, in get_replace_text
+    with open(filename, 'br') as f:
+         ~~~~^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/_2020/passwords.txt'
+uliana@ulianas-macbook-pro missing-semester % git-filter-repo --sensitive-data-removal --replace-text _2020/passwords.txt 
+Aborting: Refusing to destructively overwrite repo history since
+this does not look like a fresh clone.
+  (you have untracked changes)
+Please operate on a fresh clone instead.  If you want to proceed
+anyway, use --force.
+uliana@ulianas-macbook-pro missing-semester % git-filter-repo --sensitive-data-removal --replace-text _2020/passwords.txt --force
+
+NOTICE: Fetching all refs from origin to make sure we rewrite
+        all history that may reference the sensitive data, via
+      git fetch -q --prune --update-head-ok --refmap "" origin +refs/*:refs/*
+Parsed 636 commits
+New history written in 0.93 seconds; now repacking/cleaning...
+You rewrote 628 (of 636) commits.
+
+NOTE: First Changed Commit(s) is/are:
+  e7dd5e190f9678bbff2d1986afdccc07228f943f
+NOTE: LFS object orphaning not checked (LFS not in use)
+
+Repacking your repo and cleaning out old unneeded objects
+HEAD is now at e393824 Update CI status URLs
+Enumerating objects: 2411, done.
+Counting objects: 100% (2411/2411), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (933/933), done.
+Writing objects: 100% (2411/2411), done.
+Total 2411 (delta 1423), reused 2407 (delta 1419), pack-reused 0
+Completely finished after 1.03 seconds.
+
+NEXT STEPS FOR YOUR SENSITIVE DATA REMOVAL:
+  * If you are doing your rewrite in multiple steps, ignore these next steps
+    until you have completed all your invocations of git-filter-repo.
+  * See the "Sensitive Data Removal" subsection of the "DISCUSSION" section
+    of the manual for more details about any of the steps below.
+  * Inspect this repository and verify that the sensitive data is indeed
+    completely removed from all commits.
+  * Force push the rewritten history to the server:
+      git push --force --mirror origin
+  * Contact the server admins for additional steps they need to take; the
+    First Changed Commit(s) may come in handy here.
+  * Have other colleagues with a clone either discard their clone and reclone
+    OR follow the detailed steps in the manual to repeatedly rebase and
+    purge the sensitive data from their copy.  Again, the First Changed
+    Commit(s) may come in handy.
+  * See the "Prevent repeats and avoid future sensitive data spills" section
+    of the manual.
+
+uliana@ulianas-macbook-pro missing-semester % cd _2020
+uliana@ulianas-macbook-pro _2020 % ls
+command-line.md		editors.md		passwords.txt		shell-tools.md
+course-shell.md		files			potpourri.md		version-control.md
+data-wrangling.md	index.html		qa.md
+debugging-profiling.md	last-modified.txt	security.md
+editors-notes.txt	metaprogramming.md	semester
+uliana@ulianas-macbook-pro _2020 % cd passwords.txt 
+cd: not a directory: passwords.txt
+uliana@ulianas-macbook-pro _2020 % nano passwords.txt 
+uliana@ulianas-macbook-pro _2020 % git-filter-repo --sensitive-data-removal --replace-text passwords.txt --force
+
+Parsed 636 commits
+New history written in 0.10 seconds; now repacking/cleaning...
+You rewrote 628 (of 636) commits.
+
+NOTE: First Changed Commit(s) is/are:
+  e7dd5e190f9678bbff2d1986afdccc07228f943f
+NOTE: LFS object orphaning not checked (LFS not in use)
+
+Repacking your repo and cleaning out old unneeded objects
+HEAD is now at e393824 Update CI status URLs
+Enumerating objects: 2411, done.
+Counting objects: 100% (2411/2411), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (929/929), done.
+Writing objects: 100% (2411/2411), done.
+Total 2411 (delta 1423), reused 2411 (delta 1423), pack-reused 0
+Completely finished after 0.19 seconds.
+
+NEXT STEPS FOR YOUR SENSITIVE DATA REMOVAL:
+  * If you are doing your rewrite in multiple steps, ignore these next steps
+    until you have completed all your invocations of git-filter-repo.
+  * See the "Sensitive Data Removal" subsection of the "DISCUSSION" section
+    of the manual for more details about any of the steps below.
+  * Inspect this repository and verify that the sensitive data is indeed
+    completely removed from all commits.
+  * Force push the rewritten history to the server:
+      git push --force --mirror origin
+  * Contact the server admins for additional steps they need to take; the
+    First Changed Commit(s) may come in handy here.
+  * Have other colleagues with a clone either discard their clone and reclone
+    OR follow the detailed steps in the manual to repeatedly rebase and
+    purge the sensitive data from their copy.  Again, the First Changed
+    Commit(s) may come in handy.
+  * See the "Prevent repeats and avoid future sensitive data spills" section
+    of the manual.
+
+uliana@ulianas-macbook-pro _2020 % git rm passwords.txt                                                         
+fatal: pathspec 'passwords.txt' did not match any files
+uliana@ulianas-macbook-pro _2020 % git rm ./passwords.txt
+fatal: pathspec './passwords.txt' did not match any files
+uliana@ulianas-macbook-pro _2020 % ls
+command-line.md		editors.md		passwords.txt		shell-tools.md
+course-shell.md		files			potpourri.md		version-control.md
+data-wrangling.md	index.html		qa.md
+debugging-profiling.md	last-modified.txt	security.md
+editors-notes.txt	metaprogramming.md	semester
+uliana@ulianas-macbook-pro _2020 % git rm passwords.txt 
+fatal: pathspec 'passwords.txt' did not match any files
+uliana@ulianas-macbook-pro _2020 % rm passwords.txt 
+uliana@ulianas-macbook-pro _2020 % ls
+command-line.md		editors-notes.txt	last-modified.txt	security.md
+course-shell.md		editors.md		metaprogramming.md	semester
+data-wrangling.md	files			potpourri.md		shell-tools.md
+debugging-profiling.md	index.html		qa.md			version-control.md
+uliana@ulianas-macbook-pro _2020 % git status
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	last-modified.txt
+	semester
+
+nothing added to commit but untracked files present (use "git add" to track)
+uliana@ulianas-macbook-pro _2020 % git stash   
+No local changes to save
+uliana@ulianas-macbook-pro _2020 % rm semester 
+uliana@ulianas-macbook-pro _2020 % git status 
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	last-modified.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+uliana@ulianas-macbook-pro _2020 % git add last-modified.txt 
+uliana@ulianas-macbook-pro _2020 % git stash
+Saved working directory and index state WIP on master: e393824 Update CI status URLs
+uliana@ulianas-macbook-pro _2020 % git log --all --oneline
+616bc6c (refs/stash) WIP on master: e393824 Update CI status URLs
+4bb30f5 index on master: e393824 Update CI status URLs
+3c49a27 Merge 0f3f183bf7478870d8a4717940ee9ad87483f05a into e3938249f3094b7ad3779976b12ed3c23035efaa
+0f3f183 Update version-control.md
+e393824 (HEAD -> master) Update CI status URLs
+6dae511 Add autohotkey.com to ignore list
+22d9a9d Merge branch 'terryhsuu/update-py-call-graph-link'
+e7ba8e7 Update python call graph link
+abd6e22 typo
+e303bc4 fix typos (#292)
+e373ffb Fix CI
+f6658f3 Merge pull request #287 from j-s-ashley/ci/add-dependabot
+dfed5c7 PyPi → PyPI (Python Package Index) (#290)
+0332335 Merge branch 'BakirGracic/add-images'
+c37807b Add inaccessible remote images to repo
+ff7642a Add dependabot
+24d1646 Fix URLs
+4b6ceec Upgrade to actions/checkout@v4
+769db88 Merge branch 'sujaudd1n/patch-1'
+f4ab61a Add link for Bengali translation.
+a87e5f5 Replace dead link
+e4555c4 Ignore Stack Overflow subdomains
+a64f551 Ignore Stack Exchange
+43c4f54 Update link
+bfc935b Merge branch 'alexandr-gnrk/update-jupyter-binding'
+d1ebc81 Update Vim binding for Jupyter
+b5a9ecc Switch recommended app to Rectangle
+d78fef2 Ignore Reddit URLs when checking links
+368e0fa Merge branch 'alkock/master'
+e947d5a added german translation
+f48471d Fix broken links
+210dac6 Merge branch 'fipachu/git-aliases'
+a311e27 Add more useful overview of Git aliases
+95a3e7a Merge branch 'Nikitaz1410/patch-2'
+d4415fc Merge branch 'Nikitaz1410/patch-1'
+cf3dde5 Typos corrected in program-introspection.md
+e8ba956 Typo corrected Line 135
+773c8c3 Merge branch 'furkanakkurt1335/patch-1'
+2c1a05c Fix typo ; Update shell-tools.md
+1242bac Fix escaping
+4927460 fix typo/correct grammar (#239)
+419f7c8 Fix typo (`locahost` to `localhost`) (#238)
+59935a9 No more trixy :'(
+c4e3934 Update URL
+f7a7150 Add link to Persian translation
+12158f2 Ignore hash for GitHub URLs
+9ec9d73 Replace deleted Gist with Wayback Machine URL
+1913cc5 Add site to ignore list
+0b646ee Update URL
+373ba79 Fix broken links
+462c394 Merge branch 'detonator-man/typo-fix'
+346824b Fix typo on 2019 editors page
+d150e1b Debugging and Profiling corrections (#215)
+b51c6c1 Switch broken link to archive.org link
+266e042 Clarify that we don't want spam PRs
+670809a Add more informative 404 page
+3829c3e Merge branch 'mattrighetti/master'
+c639fd4 Add link to Italian translation
+976189a Merge branch 'missing-semester-ar/master'
+abb3f13 Merge pull request #1 from missing-semester-ar/missing-semester-ar
+acf33ec Added link to Arabic language Translation
+979c820 Take note of some more URLs
+ba18b23 Merge branch 'YesSeri/master'
+4adfea3 Text inside pre is visible while printing as pdf.
+b725bf3 Merge branch 'findyy99/master'
+5c903fb change `.zhistory` to `.zsh_history`
+uliana@ulianas-macbook-pro _2020 % git stash pop
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   last-modified.txt
+
+Dropped refs/stash@{0} (616bc6c2439a541f59639068891e294e0fe92423)
+uliana@ulianas-macbook-pro _2020 % uliauliana@ululiana@uliuliana@ulianuliuuuuuuluuuuuuuuuuuuuliana@ulianas-macbook-pro _2020 % git config --global alias.graph "log --all --graph --decorate --oneline"
+
+uliana@ulianas-macbook-pro _2020 % git graph
+
+*   3c49a27 Merge 0f3f183bf7478870d8a4717940ee9ad87483f05a into e3938249f3094b7ad3779976b12ed3c23035efaa
+|\  
+| * 0f3f183 Update version-control.md
+|/  
+* e393824 (HEAD -> master) Update CI status URLs
+* 6dae511 Add autohotkey.com to ignore list
+*   22d9a9d Merge branch 'terryhsuu/update-py-call-graph-link'
+|\  
+| * e7ba8e7 Update python call graph link
+|/  
+* abd6e22 typo
+* e303bc4 fix typos (#292)
+* e373ffb Fix CI
+*   f6658f3 Merge pull request #287 from j-s-ashley/ci/add-dependabot
+|\  
+| * ff7642a Add dependabot
+* | dfed5c7 PyPi → PyPI (Python Package Index) (#290)
+* |   0332335 Merge branch 'BakirGracic/add-images'
+|\ \  
+| |/  
+|/|   
+| * c37807b Add inaccessible remote images to repo
+|/  
+* 24d1646 Fix URLs
+* 4b6ceec Upgrade to actions/checkout@v4
+*   769db88 Merge branch 'sujaudd1n/patch-1'
+|\  
+| * f4ab61a Add link for Bengali translation.
+|/  
+* a87e5f5 Replace dead link
+* e4555c4 Ignore Stack Overflow subdomains
+* a64f551 Ignore Stack Exchange
+* 43c4f54 Update link
+*   bfc935b Merge branch 'alexandr-gnrk/update-jupyter-binding'
+|\  
+| * d1ebc81 Update Vim binding for Jupyter
+|/  
+* b5a9ecc Switch recommended app to Rectangle
+* d78fef2 Ignore Reddit URLs when checking links
+*   368e0fa Merge branch 'alkock/master'
+|\  
+| * e947d5a added german translation
+|/  
+* f48471d Fix broken links
+*   210dac6 Merge branch 'fipachu/git-aliases'
+|\  
+| * a311e27 Add more useful overview of Git aliases
+|/  
+*   95a3e7a Merge branch 'Nikitaz1410/patch-2'
+|\  
+| * cf3dde5 Typos corrected in program-introspection.md
+* |   d4415fc Merge branch 'Nikitaz1410/patch-1'
+|\ \  
+| |/  
+|/|   
+| * e8ba956 Typo corrected Line 135
+|/  
+*   773c8c3 Merge branch 'furkanakkurt1335/patch-1'
+|\  
+| * 2c1a05c Fix typo ; Update shell-tools.md
+|/  
+* 1242bac Fix escaping
+* 4927460 fix typo/correct grammar (#239)
+* 419f7c8 Fix typo (`locahost` to `localhost`) (#238)
+* 59935a9 No more trixy :'(
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*   3c49a27 Merge 0f3f183bf7478870d8a4717940ee9ad87483f05a into e3938249f3094b7ad3779976b12ed3c23035efaa
+|\  
+| * 0f3f183 Update version-control.md
+|/  
+* e393824 (HEAD -> master) Update CI status URLs
+* 6dae511 Add autohotkey.com to ignore list
+*   22d9a9d Merge branch 'terryhsuu/update-py-call-graph-link'
+|\  
+| * e7ba8e7 Update python call graph link
+|/  
+* abd6e22 typo
+* e303bc4 fix typos (#292)
+* e373ffb Fix CI
+*   f6658f3 Merge pull request #287 from j-s-ashley/ci/add-dependabot
+|\  
+| * ff7642a Add dependabot
+* | dfed5c7 PyPi → PyPI (Python Package Index) (#290)
+* |   0332335 Merge branch 'BakirGracic/add-images'
+|\ \  
+| |/  
+|/|   
+| * c37807b Add inaccessible remote images to repo
+|/  
+* 24d1646 Fix URLs
+* 4b6ceec Upgrade to actions/checkout@v4
+*   769db88 Merge branch 'sujaudd1n/patch-1'
+|\  
+| * f4ab61a Add link for Bengali translation.
+|/  
+* a87e5f5 Replace dead link
+* e4555c4 Ignore Stack Overflow subdomains
+* a64f551 Ignore Stack Exchange
+* 43c4f54 Update link
+*   bfc935b Merge branch 'alexandr-gnrk/update-jupyter-binding'
+|\  
+| * d1ebc81 Update Vim binding for Jupyter
+|/  
+* b5a9ecc Switch recommended app to Rectangle
+* d78fef2 Ignore Reddit URLs when checking links
+*   368e0fa Merge branch 'alkock/master'
+|\  
+| * e947d5a added german translation
+|/  
+* f48471d Fix broken links
+*   210dac6 Merge branch 'fipachu/git-aliases'
+|\  
+| * a311e27 Add more useful overview of Git aliases
+|/  
+*   95a3e7a Merge branch 'Nikitaz1410/patch-2'
+|\  
+| * cf3dde5 Typos corrected in program-introspection.md
+* |   d4415fc Merge branch 'Nikitaz1410/patch-1'
+|\ \  
+| |/  
+|/|   
+| * e8ba956 Typo corrected Line 135
+|/  
+*   773c8c3 Merge branch 'furkanakkurt1335/patch-1'
+|\  
+| * 2c1a05c Fix typo ; Update shell-tools.md
+|/  
+* 1242bac Fix escaping
+* 4927460 fix typo/correct grammar (#239)
+* 419f7c8 Fix typo (`locahost` to `localhost`) (#238)
+* 59935a9 No more trixy :'(
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*   3c49a27 Merge 0f3f183bf7478870d8a4717940ee9ad87483f05a into e3938249f3094b7ad3779976b12ed3c23035efaa
+|\  
+| * 0f3f183 Update version-control.md
+|/  
+* e393824 (HEAD -> master) Update CI status URLs
+* 6dae511 Add autohotkey.com to ignore list
+*   22d9a9d Merge branch 'terryhsuu/update-py-call-graph-link'
+|\  
+| * e7ba8e7 Update python call graph link
+|/  
+* abd6e22 typo
+* e303bc4 fix typos (#292)
+* e373ffb Fix CI
+*   f6658f3 Merge pull request #287 from j-s-ashley/ci/add-dependabot
+|\  
+| * ff7642a Add dependabot
+* | dfed5c7 PyPi → PyPI (Python Package Index) (#290)
+* |   0332335 Merge branch 'BakirGracic/add-images'
+|\ \  
+| |/  
+|/|   
+| * c37807b Add inaccessible remote images to repo
+|/  
+* 24d1646 Fix URLs
+* 4b6ceec Upgrade to actions/checkout@v4
+*   769db88 Merge branch 'sujaudd1n/patch-1'
+|\  
+| * f4ab61a Add link for Bengali translation.
+|/  
+* a87e5f5 Replace dead link
+* e4555c4 Ignore Stack Overflow subdomains
+* a64f551 Ignore Stack Exchange
+* 43c4f54 Update link
+*   bfc935b Merge branch 'alexandr-gnrk/update-jupyter-binding'
+|\  
+| * d1ebc81 Update Vim binding for Jupyter
+|/  
+* b5a9ecc Switch recommended app to Rectangle
+* d78fef2 Ignore Reddit URLs when checking links
+*   368e0fa Merge branch 'alkock/master'
+|\  
+| * e947d5a added german translation
+|/  
+* f48471d Fix broken links
+*   210dac6 Merge branch 'fipachu/git-aliases'
+|\  
+| * a311e27 Add more useful overview of Git aliases
+|/  
+*   95a3e7a Merge branch 'Nikitaz1410/patch-2'
+|\  
+| * cf3dde5 Typos corrected in program-introspection.md
+* |   d4415fc Merge branch 'Nikitaz1410/patch-1'
+|\ \  
+| |/  
+|/|   
+| * e8ba956 Typo corrected Line 135
+|/  
+*   773c8c3 Merge branch 'furkanakkurt1335/patch-1'
+|\  
+| * 2c1a05c Fix typo ; Update shell-tools.md
+|/  
+* 1242bac Fix escaping
+* 4927460 fix typo/correct grammar (#239)
+* 419f7c8 Fix typo (`locahost` to `localhost`) (#238)
+* 59935a9 No more trixy :'(
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*   3c49a27 Merge 0f3f183bf7478870d8a4717940ee9ad87483f05a into e3938249f3094b7ad3779976b12ed3c23035efaa
+|\  
+| * 0f3f183 Update version-control.md
+|/  
+* e393824 (HEAD -> master) Update CI status URLs
+* 6dae511 Add autohotkey.com to ignore list
+*   22d9a9d Merge branch 'terryhsuu/update-py-call-graph-link'
+|\  
+| * e7ba8e7 Update python call graph link
+|/  
+* abd6e22 typo
+* e303bc4 fix typos (#292)
+* e373ffb Fix CI
+*   f6658f3 Merge pull request #287 from j-s-ashley/ci/add-dependabot
+|\  
+| * ff7642a Add dependabot
+* | dfed5c7 PyPi → PyPI (Python Package Index) (#290)
+* |   0332335 Merge branch 'BakirGracic/add-images'
+|\ \  
+| |/  
+|/|   
+| * c37807b Add inaccessible remote images to repo
+|/  
+* 24d1646 Fix URLs
+* 4b6ceec Upgrade to actions/checkout@v4
+*   769db88 Merge branch 'sujaudd1n/patch-1'
+|\  
+| * f4ab61a Add link for Bengali translation.
+|/  
+* a87e5f5 Replace dead link
+* e4555c4 Ignore Stack Overflow subdomains
+* a64f551 Ignore Stack Exchange
+* 43c4f54 Update link
+*   bfc935b Merge branch 'alexandr-gnrk/update-jupyter-binding'
+|\  
+| * d1ebc81 Update Vim binding for Jupyter
+|/  
+* b5a9ecc Switch recommended app to Rectangle
+* d78fef2 Ignore Reddit URLs when checking links
+*   368e0fa Merge branch 'alkock/master'
+|\  
+| * e947d5a added german translation
+|/  
+* f48471d Fix broken links
+*   210dac6 Merge branch 'fipachu/git-aliases'
+|\  
+| * a311e27 Add more useful overview of Git aliases
+|/  
+*   95a3e7a Merge branch 'Nikitaz1410/patch-2'
+|\  
+| * cf3dde5 Typos corrected in program-introspection.md
+* |   d4415fc Merge branch 'Nikitaz1410/patch-1'
+|\ \  
+| |/  
+|/|   
+| * e8ba956 Typo corrected Line 135
+|/  
+*   773c8c3 Merge branch 'furkanakkurt1335/patch-1'
+|\  
+| * 2c1a05c Fix typo ; Update shell-tools.md
+|/  
+* 1242bac Fix escaping
+* 4927460 fix typo/correct grammar (#239)
+* 419f7c8 Fix typo (`locahost` to `localhost`) (#238)
+* 59935a9 No more trixy :'(
+* c4e3934 Update URL
+* f7a7150 Add link to Persian translation
+* 12158f2 Ignore hash for GitHub URLs
+* 9ec9d73 Replace deleted Gist with Wayback Machine URL
+* 1913cc5 Add site to ignore list
+* 0b646ee Update URL
+* 373ba79 Fix broken links
+*   462c394 Merge branch 'detonator-man/typo-fix'
+|\  
+| * 346824b Fix typo on 2019 editors page
+* | d150e1b Debugging and Profiling corrections (#215)
+* | b51c6c1 Switch broken link to archive.org link
+|/  
+* 266e042 Clarify that we don't want spam PRs
+* 670809a Add more informative 404 page
+*   3829c3e Merge branch 'mattrighetti/master'
+|\  
+| * c639fd4 Add link to Italian translation
+|/  
+*   976189a Merge branch 'missing-semester-ar/master'
+|\  
+| * abb3f13 Merge pull request #1 from missing-semester-ar/missing-semester-ar
+|/| 
+| * acf33ec Added link to Arabic language Translation
+|/  
+* 979c820 Take note of some more URLs
+*   ba18b23 Merge branch 'YesSeri/master'
+|\  
+| * 4adfea3 Text inside pre is visible while printing as pdf.
+|/  
+*   b725bf3 Merge branch 'findyy99/master'
+|\  
+| * 5c903fb change `.zhistory` to `.zsh_history`
+|/  
+* 11191ed Clean up title
+* ef08f05 Switch to GA4
+*   ba94acd Merge branch 'TianyiFranklinWang/master'
+|\  
+| * 4a1403a Fix a wrong usage of ! within double quotation marks
+|/  
+* 4468faa Switch to archived copy of image from deleted blog
+* 9e0b296 Simplify build
+* d233a41 Switch to ruby/setup-ruby and pin ruby version
+* 8ba2737 Replace dead website with archive.org link
+* b9388f2 Update link
+* d048039 Fix HTML validation
+* 08fe8a0 Switch to proof-html v2
+*   9287bba Merge branch 'migatt/feature-print-urls'
+|\  
+| * 865fd8b Show URL only after external links
+| * 9caaab1 Show URL after Link in Print View
+* | 8e4cb44 Add Docker setup for easier development
+|/  
+*   17d675f Merge branch 's-kupek/master'
+|\  
+| * 2a51671 FIX: Spelling mistakes,'content' should be plural and verb adjusted accordingly
+|/  
+* a0e1866 Upgrade to actions/checkout@v3
+* 09fbd13 Update link
+* 322da8b Update link
+*   af56bee Merge branch 'Hgrpoiu/master'
+|\  
+| * 3f00c2b Modified command-line for readability
+|/  
+*   3cae269 Merge branch 'UnrealApex/patch-1'
+|\  
+| * 07cf917 Use key that is a better equivalent to s
+|/  
+* 4f0e1a5 Fix broken links
+*   79588ef Merge pull request #187 from HtwoO/patch-1
+|\  
+| * 1f4a6bb private key path is expected after -i of ssh client
+|/  
+*   911e49b Merge branch 'soulrrrrr/soulr'
+|\  
+e next line.
+|/  
+*   be16c0b Merge pull request #178 from ChathurGudesa/master
+|\  
+| * fa9b2e3 Remove incorrectly used comma
+|/  
+*   4a9fd42 Merge branch 'weeklies/use--no-echo'
+|\  
+| * 744975a Use --no-echo for R option
+|/  
+*   c6396e6 Merge pull request #172 from chapmanjacobd/patch-1
+|\  
+| * 1db1a28 Add Alt+.
+* | 81edbeb Add ignored URL
+* |   834dabb Merge pull request #173 from UranusITS/master
+|\ \  
+| |/  
+|/|   
+| * f3d264f fix typo
+|/  
+*   41a0294 Merge branch 'ds2606/master'
+|\  
+| * 73d19f9 fixed checked nav-bar block styling on media query
+|/  
+* 99be14c Add a really nice strace zine resource (#168)
+*   938074b Merge branch 'jtomori/fix-kill-cmd'
+|\  
+| * bea6dd8 Fix kill parameter to list signals.
+|/  
+* 478e51b Fix broken links
+* 5745e3a Fix broken link
+* 6a929b3 Add a github tutorial on how to contribute (#162)
+*   397810c Merge branch 'kumatheworld/fix-numbering'
+|\  
+| * f183102 Fix list numbering
+|/  
+*   ca7cbe5 Merge branch 'LemurP/master'
+|\  
+| * 65f906b Add link to Git alias section in exercise
+|/  
+* f0dd798 Bump dependencies
+* f9e080b Separate build and links status
+*   e158209 Merge branch 'nullmight/fix-key-type'
+|\  
+| * 6471a8b Fix key type in tutorial
+|/  
+*   8ff18e0 Merge branch 'FabienRoger/add-plural'
+|\  
+| * b7d5fe4 Add plural to parent variable
+|/  
+* 5eabd2e Update broken links
+* b575025 Use Vimium description from the GitHub repo
+*   2ecc888 Merge branch 'deeperlearner/patch-1'
+|\  
+| * d294ca9 Update qa.md
+| * cce31c3 Add a browser plugin that I found it is useful.
+|/  
+* 638a4f5 Point broken link to archive.org version
+* 8d86cc8 Tweak wording
+*   52ebddb Merge branch 'mnahinkhan/patch-1'
+|\  
+| * 721099a Clarify how cat functions
+* | 887a9f7 docs: delete backquote in bash script (#146)
+|/  
+* 1357a20 Ignore another flaky URL
+*   c3d4c99 Merge branch 'kartikeytewari/master'
+|\  
+| * fdf25ce change _2019/security.md
+|/  
+*   3317497 Merge branch 'oliver/patch-1'
+|\  
+| * 7f5322d add missing close parenthesis
+|/  
+*   32c9675 Merge pull request #141 from blentz100/course-overview
+|\  
+| * d190f35 changed fancyful to fanciful
+|/  
+* cb1d1a7 Ignore another site that is flaky in CI
+*   df5b599 Merge branch 'rareloto/update-commandline-rephrase'
+|\  
+| * 34fe1c8 Minor rephrasing on Job control Exercise 2
+|/  
+* 9754ed6 Update link
+*   4f42fa0 Merge branch 'letian-jiang/improve-version-control'
+|\  
+| * 568469d add two punctuation marks
+|/  
+*   ec20a4c Merge branch 'waynezhangw/tinyFix'
+|\  
+| * 72bf5d3 add two period mark at Exercises 2 of version-control
+|/  
+* aed94f2 Add link to explanation of BSD vs GNU coreutils
+* 6a1c5ef fixed a couple of typos (#130)
+*   af16bad Merge branch 'GCrispino/patch-1'
+|\  
+| * 73db8f0 Fix sentence in last command line exercise
+|/  
+*   ed846aa Merge branch 'sburris0/patch-1'
+|\  
+| * fbc13aa Add link to big list of vim-like software
+|/  
+* edd3c0b Restore Mark Janssen's cipherlist/ssldecoder
+* 45f9ebc Update link
+* f733313 Add visual mode key bindings (#122)
+*   3446ddb Merge branch 'soramichi/fix_metaprogramming'
+|\  
+| * 80a0f61 fix foo.dat to data.dat
+|/  
+*   105314b Merge branch 'matsui528/add_japanese_translation'
+|\  
+| * cc12125 Added the link to Japanese translation
+|/  
+*   46c4e1d Merge branch 'm-naumann/patch-2'
+|\  
+| * a214e7a Update qa.md: Add url to firefox screenshots
+|/  
+*   410f5f2 Merge branch 'm-naumann/patch-1'
+|\  
+| * d7a918c Update debugging-profiling.md: minor reordering
+|/  
+* 948bb25 Add link to Russian translation
+*   8fdd009 Merge branch 'WWRS/WWRS-lineprofiler-pyutils'
+|\  
+| * 62fc28a Update line_profiler link
+|/  
+* eb7611f Make homepage schedule show year
+* 2f3b27c Update dependencies
+* 49cd28c Remove rate limit and add GitHub token
+* ea5f24a Switch to proof-html action
+*   235cb24 Merge branch 'mattrohr/fix-shell-notes'
+|\  
+| * 4157e4d Clarify default shell history behavior
+|/  
+* e79598a Disable CI
+* b3ded69 Switch to GitHub Actions
+* ffeda84 Add instructions to install GraphViz as a prereq (#108)
+*   7d10d27 Merge branch 'kljensen/patch-1'
+|\  
+| * f4b1821 Add pass and 1password as example password managers
+* |   e5096e1 Merge branch 'puneetlath/fix-git-merge-diagram'
+|\ \  
+| |/  
+|/|   
+| * b4d2ee4 fix background style on merging branches diagram
+|/  
+*   7de6a38 Merge branch 'abatishchev/patch-1' into master
+|\  
+| * 3ca5085 Update potpourri.md
+|/  
+* 4b75129 Update youtube-dl URL
+* a0d4f19 Update data-wrangling.md -- clarify wording (#101)
+*   e49c807 Merge branch 'zacheller/patch-1' into master
+|\  
+| * 8e9a5ee Update data-wrangling.md
+|/  
+*   5d1db5c Merge branch 'holdmygithub/master' into master
+|\  
+| * 4ba7d67 fixed a small typo at the end of this file
+|/  
+*   8a59447 Merge branch 'DAngelo-S/master' into master
+|\  
+| * 10ff730 add the Portuguese version
+|/  
+*   1677bf1 Merge branch 'exercise-solutions' into master
+|\  
+| * 9e46672 Add note on (lack of) solutions to exercises
+* | 89fb619 Add note on BSD vs GNU coreutils
+|/  
+* 396c76b Update htop link
+* 794b637 Update dependencies
+* ef6a27d Add note about Windows and cmd.exe/PowerShell
+*   91e5ce9 Merge branch 'marcoroganovic/patch-01' into master
+|\  
+| * 4bb12b0 Add translation URL for Serbian language
+|/  
+*   0f3c3f4 Merge branch 'Ersmes/check-repo' into master
+|\  
+| * 5c9867c Fixed typo in debugging lecture
+|/  
+* c320b2d Fix broken link
+* d69da1b Add note on intentional spelling
+* 352ee13 Update for terminals without 24-bit color support
+*   d6ab343 Merge branch 'sreevamsiy/patch-1'
+|\  
+| * cf19369 Update command-line.md
+|/  
+*   c660f4f Merge pull request #83 from hoxiea/master
+|\  
+| * 664e3a2 Remove incorrect/ambiguous 'separated'
+arification per Jon review
+* |   d0ad0a8 Merge branch 'AnhTuDo1998/patch-1'
+|\ \  
+| * | 4f46055 Added Vietnamese translation site link
+|/ /  
+* |   0bf6c38 Merge branch 'bewuethr/q-and-a-typos'
+|\ \  
+| * | 07ea65b Fix typos in Q&A lecture notes
+|/ /  
+* |   bda0b1f Merge branch 'bewuethr/potpourri-typos'
+|\ \  
+| * | 4de134c Fix TOC entry for hammerspoon
+|/ /  
+* |   6bae03e Merge branch 'bewuethr/potpourri-typos'
+|\ \  
+| * | 90dc96a Fix typo in potpourri lecture
+* | |   42ca2d9 Merge branch 'bewuethr/typo'
+|\ \ \  
+| |/ /  
+|/| |   
+| * | 7aa5718 Fix typo in security notes
+|/ /  
+* |   f1fa3e8 Merge branch 'zhangke91/fix-typo'
+|\ \  
+| * | c484019 Fix the typo s/clone/fork/ in exercise section in version-control.md.
+|/ /  
+* |   b96c7b0 Merge branch 'bewuethr/typo'
+|\ \  
+| * | 83c7786 Fix typo
+|/ /  
+* | 57ebc43 Ignore another flaky website
+* | 31e57c1 Fix ignoring of userstyles.org
+* |   390c12e Merge pull request #72 from wesleyjr01/ignore
+|\ \  
+| * | 68632eb Possibly wrong GitHub Pages Hyperlink
+, it may generate  a __pycache__ folder and submit it to remote.
+* | |   27504bc Merge pull request #73 from wesleyjr01/pages
+|\ \ \  
+| |/ /  
+|/| |   
+| * | ecbb25c Possibly wrong GitHubPages hyperlink.
+|/ /  
+* |   f78cfd8 Merge branch 'shiyoung77/master'
+|\ \  
+| * | d83ccff Fix description of "git diff <filename>"
+|/ /  
+* |   dbecff4 Merge pull request #70 from TanayB11/patch-1
+|\ \  
+| * | 6c2ccec Fix grammar
+| * | dfb187b Remove macOS example
+| * |   0d13237 Merge pull request #1 from TanayB11/patch-2
+| |\ \  
+| | * | e9a514f Phrasing tweak
+| |/ /  
+|/| |   
+| * | 9c0071d Examples and syntactic changes
+|/ /  
+* |   b5e3a00 Merge branch 'missing-semester-esp/master'
+|\ \  
+| * | a8e879a Add Spanish translation link
+|/ /  
+* |   31b35a1 Merge branch 'bewuethr/typos-lecture-2'
+|\ \  
+| * | 8f64ced Fix "find -path" command to match comment
+| * | 82c9b23 Add small fixes for shell tools lecture
+* | | 183a34d Clean up translations list
+* | |   6823247 Merge branch 'missing-semester-zh-Hant/master'
+|\ \ \  
+| * | | 8340539 Add Traditional Chinese translation link
+|/ / /  
+* | |   6160de9 Merge branch 'GzuPark/patch-1'
+|\ \ \  
+| |/ /  
+|/| |   
+| * | 85884d8 Add the translate to Korean version
+|/ /  
+* |   f15678f Merge pull request #62 from hasantezcan/master
+|\ \  
+| * | 0f75190 Add Turkish translation
+|/ /  
+* | 2ec758e Update workaround
+* | 79a57e1 Add flaky website to ignore list
+* | 2bc7bf2 Update broken link
+* | a069919 Add workaround for expired root cert issue in CI
+* |   46b40b8 Merge pull request #61 from huangrt01/master
+|\ \  
+| * | e196a2c TYPO in version-control.md
+|/ /  
+* |   d693c1e Merge branch 'LennartNeukamm/patch-1'
+|\ \  
+| * | 8b15d7b Fixed typo
+|/ /  
+* | 8a228db Add link to short-circuiting operators
+* | 12f3a9e Fix typo
+|/  
+*   5272a2b Merge branch 'hoxiea/edits'
+|\  
+| * 6bef8d7 Capitalize Vim mode names, brief note about how to start vimtutor
+|/  
+* 6f9cfdf Add workaround for incomplete certificate chains
+* cd5928c Switch man page links to HTTPS
+*   3c3848b Merge branch 'etcadinfinitum/commit-messages'
+|\  
+| * b045a77 Add second link for commit message best practices
+|/  
+* feb02a0 Fix shebang technicality
+*   58d7498 Merge pull request #52 from hoxiea/patch-2
+|\  
+| * 2517ea4 Minor cleanup
+|/  
+* 4ad68a7 Fix shallow clone command
+*   9850026 Merge branch 'hoxiea/patch-1'
+|\  
+| * 6a2bf94 Pluralize "curriculum"
+* |   2936b2e Merge branch 'bpshaver/master'
+|\ \  
+| |/  
+|/|   
+| * c27f3bb Update metaprogramming.md
+|/  
+* 49bdbef Fix kramdown inferring incorrect smart quote
+* aeb6935 Add retrying in case of random network failures
+*   1546278 Merge pull request #48 from kdmayer/fixTypo
+|\  
+| * dbe3851 First character after colons to lower-case.
+* | 815001e Add note on lectures being self-contained
+* | 4546bcd Add translations section to homepage
+* | 55eecf2 Fix broken fragments
+* | ca68c32 Allow images to be served over HTTP
+* | d006a04 Ignore some URLs that don't seem to work with htmlproofer
+* | e6c7deb Add build status to README
+* | 8260c8d Fix Travis CI build
+* | 0125213 Fix broken links
+* | 3aec083 Remove links to defunct r/hackertools subreddit
+* | ffc70ef Add Travis CI config
+* |   4f76115 Merge branch 'devanshrj/master'
+|\ \  
+| * | aa854b6 Typo in command-line.md
+|/ /  
+* |   1750838 Merge pull request #44 from Corbin-A/master
+|\ \  
+| * | aaafafc Small formatting and grammar tweaks
+|/ /  
+* | 5020b53 Remove use of "said"
+* |   166de2e Merge pull request #42 from FMJansen/patch-1
+|\ \  
+| * | 8521630 fix typo
+|/ /  
+* |   c66dab0 Merge branch 'EthanVieira/master'
+|\ \  
+| * | 01d352e fix small typo
+|/ /  
+* |   844c9c7 Merge pull request #40 from StevenMaude/correct-shell-parameter-term
+|\ \  
+| * | 8bb2bfd Describe the shell parameter $! correctly
+|/ /  
+* |   dd87a4d Merge pull request #38 from connorrose/typo
+|\ \  
+| * | 8e0c28b Fix exercise autonumber and indents
+|/ /  
+* |   2b619d5 Merge branch 'nishkakotian/my_branch'
+|\ \  
+| * | 5328713 Removed a letter
+|/ /  
+* |   0c25105 Merge pull request #35 from eldarkurtic/master
+|\ \  
+| * | c25c128 Fix 'the math' -> 'math'
+| * | a90e1a8 Fix small typos
+|/ /  
+* |   919f877 Merge branch 'krishnakumarg1984/krishna_fix_typos'
+|\ \  
+| * | 9f05461 adds a number of typo fixes to markdown files in the project repo
+|/ /  
+* | 2412043 Typo; fixes #33
+* |   9096508 Merge pull request #32 from carpdiem/patch-3
+|\ \  
+| |/  
+|/|   
+| * 990cf13 Change link to cProfile from python2 -> python3 docs
+|/  
+* 1d4a1c9 Fix mixup between RemoteForward and LocalForward
+*   020fcb4 Merge pull request #30 from carpdiem/patch-2
+|\  
+| * 282630e link to info about ssh-agent is incorrect
+|/  
+*   b486c7f Merge pull request #29 from lepasq/typo-shell-lecture
+|\  
+| * ec9ff48 Fix typo inside shell-tools.md
+|/  
+*   b341716 Merge pull request #27 from rbnsl/master
+|\  
+| * fb423a1 Added prettier as example of a code formatter
+* | 6eacdae Fix typo
+|/  
+*   a481a9f Merge branch 'J16053/patch-1'
+|\  
+| * 868e353 Fix typo in example
+|/  
+*   9e5b0be Merge branch 'lcynot/patch-1'
+|\  
+| * bed2366 fix the typo
+|/  
+*   c377cd6 Merge pull request #23 from Mendoza2909/typo
+|\  
+| * 69cf523 Typo
+|/  
+*   dff5e2c Merge branch 'carpdiem/patch-1'
+|\  
+| * 2202d3d incorrect link in exercises: terminal multiplexer
+|/  
+*   5db3c25 Merge pull request #21 from piaoliangkb/master
+|\  
+| * 16c5590 fix typo
+|/  
+*   f54e382 Merge pull request #20 from missing-semester/dependabot/bundler/nokogiri-1.10.8
+|\  
+| * 2d708d2 Bump nokogiri from 1.10.7 to 1.10.8
+|/  
+* 9ec7aae Add more info on shebang
+* a0c130f Clarify `./semester` vs `sh semester` in exercises
+* 2f1493e Clarify lack of sysfs on macOS/Windows
+* b4afe43 Fix numbering
+*   2d08fbd Merge branch 'cthogg/patch-1'
+|\  
+| * a10be13 fix: typo
+|/  
+*   6b6cf83 Merge pull request #18 from krohnta/master
+|\  
+| * 5191c39 Fix wrong option in alias example
+|/  
+* a5019d4 Add link to website license page
+* 9f4e08c Clarify that license covers source code
+* a1df347 Tweak license wording
+* 3bddbfb Add license and guidelines
+*   584b7f0 Merge branch 'manzt/patch-1'
+|\  
+| * f71a590 tmux -t is illegal option
+|/  
+* cb1b134 Fix typos in example
+* 603a056 Add note on SHA-1 being broken
+*   becacc9 Merge branch 'benlk/patch-1'
+|\  
+| * 5f03c81 Enlarge upon the sha1sum examples
+|/  
+*   7c5aff0 Merge branch 'nixon/master'
+|\  
+| * 85240b9 fix typo
+|/  
+*   9456728 Merge branch 'StTronn/versionundo'
+|\  
+| * 30c54f9 Add undo commands
+|/  
+*   b632861 Merge branch 'SeanPedersen/patch-2'
+|\  
+| * 23ebf5d Update security.md
+|/  
+* f559da1 Note about 'real' metaprogramming meaning (#9)
+* f72637b Add note about ZSH
+*   b6695fe Merge branch 'm-laniakea/patch-1'
+|\  
+| * 2474d14 command-line.md/Aliases: Fix top-10 history script
+|/  
+* a7a982f Fix incorrect use of WebKit in Q&A notes
+* 23adc06 Add captions for lecture 2
+* f95e9dd Fix link
+* 5e3f62c Add redirect
+* 086de9c Update links
+* 022060d Update description
+* 4922886 Remove irrelevant info now that class is over
+* 1f614a5 Do editing pass on Q&A lecture
+* 8720f5c Add subtitles for lectures 5,7,11
+* 07a7f47 Add notes for Q&A lecture
+* 752e88a Fix "video coming soon" on /about/ page
+* 789d2f8 Add Q&A video
+* dd84ee4 Publish potpourri video
+* 775dfb1 New videos for all lectures
+*   2ba2af9 Merge pull request #6 from martinplattnr/patch-1
+|\  
+| * 2a922ae Update potpourri.md
+|/  
+* 43f0fba Remove stray 1
+*   3d84d10 Merge branch 'master' of github.com:missing-semester/missing-semester
+|\  
+| * 2cb28f2 Nicer page break points
+* | 81230f1 Add TOC for Potpourri
+|/  
+* 5b2fc68 Jose's Potpourri
+* b00d9dc adjustments
+* 3a75ae1 Remove names from lecture notes
+* 496029a Add my content
+* 68d4419 jon potpourri
+* 77daf26 Add basic structure to potpourri
+* dbf730f Add resources
+* 30a8b1a Clarify that hash is deterministic
+* bb2560a Add some more case studies
+* 894b1a3 Add notes for security lecture
+* 2b1c9a1 Release lec7 and lec8 videos
+* 197b9a5 Sane print styles
+* 9477296 Release meta
+* 883582e Python 2/3, testing, and exercises
+* 3e16905 Rename lecture notes
+* 9ef9b08 First draft of meta
+* b055718 Minor edits to debug/profiling
+* c0e56bf Toggle lecture visibility
+* 908b449 Remove hanging TODO
+* 1fe4a4b Finish debug-profile lecture notes
+* 6cc4cb1 Some writing edits to debug-profile
+* d73cdf1 Finish cProfile example
+* a4bac92 Finish exercises for debug and profiling
+* 3f102b9 Fix insane date value scheme
+* cb1a94c Fix missing EOF newline
+* eed72f2 Add command-line lecture video
+* b53fc36 Move
+* f84b07d Process Jon and Jose's feedback
+* 7656bd5 Fix typo
+* 4beeeeb Add text on immutable objects and mutable refs
+* 5bbfe7c Flip direction of arrows for consistency
+* 466f6da Fix typo
+* 074c835 Reformat exercise
+* c541b17 Add notes for version control lecture
+*   3f70252 Merge branch 'cnord/zsh-autosuggest'
+|\  
+| * b066e27 Clarify zsh history search vs. autosuggestions in shell tools lecture
+|/  
+* 9c75db6 Update notes for command line environment
+* c2b9275 Add more tmux notes to command-line
+* 3780c87 Unready debugging and profiling notes
+* 3780c87 Unready debugging and profiling notes
+* 36224f7 Minor fix in shell-tools notes
+* 3a62944 First draft of debugging-profiling notes
+* e4291ed Draft of command line environment notes
+* cd0f5f4 Remove link to Hacker Tools from README
+*   3f70252 Merge branch 'cnord/zsh-autosuggest'
+|\  
+| * b066e27 Clarify zsh history search vs. autosuggestions in shell tools lecture
+|/  
+* 9c75db6 Update notes for command line environment
+* c2b9275 Add more tmux notes to command-line
+* 3780c87 Unready debugging and profiling notes
+* 36224f7 Minor fix in shell-tools notes
+* 3a62944 First draft of debugging-profiling notes
+* e4291ed Draft of command line environment notes
+* cd0f5f4 Remove link to Hacker Tools from README
+* 17a637b Rewrite exercise possible ambiguity
+* b049fec Fix aspect ratio
+* 123ebe0 Link to YouTube playlist
+* 415a54f Fix
+* b88ca7d Add lecture videos
+* 00368a8 Fix broken links
+* 3853052 Fix broken links in 2019 site
+* 13ae56f Redo lectures as a collection
+* da24da8 Add redirect
+* dec3a94 Organize site by year
+* 2d7b1d7 exercise tidying
+* f927ae6 Less Linux-specific exercises
+* 263218e Fix accent color in dark mode
+* 3733607 Fix CSS for monofont links on dark mode
+* 7840923 Fix coming soon for MLK day
+* 83c4155 Fix arrow key remaps in insert mode
+* eb65138 Process Jose's feedback
+* 43f3c5e jjgo comments
+* d05db16 Exercises for data wrangling
+* ee7aaca First draft of data wrangling lecture notes
+* ec3e1c5 Add exercise
+* 8d8a2a7 Add reference
+* ab28b1c Improve exercises
+* 96e5c5d Swap lectures
+* 8952c9d Add note on macOS and sysfs
+* a8819c4 Process Jon's feedback
+* dfd48bd Fix issues with shell tools notes
+* 026dac3 Make heading levels more consistent
+* 02ea7c2 Fix exercise numbering
+* 1f854d7 Remove alias from shell tools notes
+* de245e4 Add acks
+* 5f47c44 Add shell tools exercises
+* 20707ce Add acks
+* cd302a3 Link editors lecture notes
+* 79ceaa4 Add editors lecture for 2020
+* 8a2b688 Fix CSS class naming conflict
+* 655c6a2 Add hint: man, not find
+* d5f6381 Add hint on quoting
+* bd73209 Tweaks
+* a984c06 Where questions go
+* 340578f Make it clear that videos will be added to notes
+* e8c038c Don't break lines in code segments
+* 730acdd Minor language nit in 1st lecture
+* 6c26152 Some sudo + sysfs bits for the advanced
+* 4a8ef98 Add shell tools and scripting lecture notes
+* 5a6b81a Add exercise for first lecture
+* cf0f764 Another unnecessarily long line
+* 2be4df3 Shorten long line
+* 6bd6066 Trailing prompt is distracting
+* 78a88f3 Link to lecture notes from home page schedule
+* 8ba5e8c Make padding on code blocks a little nicer
+* 70f4baa Gemfile bump
+* 0a9228e First lecture notes (no exercise yet)
+* e0fc544 Simplify homepage
+* 2eebf4f Process Jose's feedback
+* db2bb0e Update homepage and lectures list
+* 5e6b901 Reorder topics
+* 603e0d0 Make another editing pass over about page
+* e018003 Fix validation errors
+*   1a2c887 Merge pull request #1 from missing-semester/dependabot/bundler/rubyzip-2.0.0
+|\  
+| * 36e3bd8 Bump rubyzip from 1.2.2 to 2.0.0
+* | 445667f nit: add space after parenthesis
+* | a615b51 Remove hacky js for asciinemas
+* | 9d87523 Fix autoplay on mobile
+* | 66eb47e Redo demos using videos and outside comments
+* | 760b722 Minor fix for inline code blocks
+* | 6825f5b Import fonts, increase font & add dark theme
+* | 31ab1f8 Include asciicasts in the about page
+* | 6befbeb Add lecture time and location
+* | 4aa671a Add description and partial info for 2020
+* | 51699de Change color scheme
+* | 6ddb4ee Add first draft of 'about the class' blog post
+|/  
+* 1bdc8e5 Update dependencies
+* c84c0e4 Begin transition to new name and domain
+* 39c9a12 Update information related to rsync.net
+*   7364971 Merge pull request #12 from 01programs/patch-2
+|\  
+| * ae852b4 fix typo
+|/  
+* 062fa05 Update notes on encrypted filesystems
+* 3957f9f Add notes on append only backups
+*   7a274ba Merge branch 'chrisamurao/patch-1'
+|\  
+:
+* ee7aaca First draft of data wrangling lecture notes
+* ec3e1c5 Add exercise
+* 8d8a2a7 Add reference
+* ab28b1c Improve exercises
+* 96e5c5d Swap lectures
+* 8952c9d Add note on macOS and sysfs
+* a8819c4 Process Jon's feedback
+* dfd48bd Fix issues with shell tools notes
+* 026dac3 Make heading levels more consistent
+* 02ea7c2 Fix exercise numbering
+* 1f854d7 Remove alias from shell tools notes
+* de245e4 Add acks
+* 5f47c44 Add shell tools exercises
+* 20707ce Add acks
+* cd302a3 Link editors lecture notes
+* 79ceaa4 Add editors lecture for 2020
+* 8a2b688 Fix CSS class naming conflict
+* 655c6a2 Add hint: man, not find
+* d5f6381 Add hint on quoting
+* bd73209 Tweaks
+* a984c06 Where questions go
+* 340578f Make it clear that videos will be added to notes
+* e8c038c Don't break lines in code segments
+* 730acdd Minor language nit in 1st lecture
+* 6c26152 Some sudo + sysfs bits for the advanced
+* 4a8ef98 Add shell tools and scripting lecture notes
+* 5a6b81a Add exercise for first lecture
+* cf0f764 Another unnecessarily long line
+* 2be4df3 Shorten long line
+* 6bd6066 Trailing prompt is distracting
+* 78a88f3 Link to lecture notes from home page schedule
+* 8ba5e8c Make padding on code blocks a little nicer
+* 70f4baa Gemfile bump
+* 0a9228e First lecture notes (no exercise yet)
+* e0fc544 Simplify homepage
+* 2eebf4f Process Jose's feedback
+* db2bb0e Update homepage and lectures list
+* 5e6b901 Reorder topics
+* 603e0d0 Make another editing pass over about page
+* e018003 Fix validation errors
+*   1a2c887 Merge pull request #1 from missing-semester/dependabot/bundler/rubyzip-2.0.0
+|\  
+| * 36e3bd8 Bump rubyzip from 1.2.2 to 2.0.0
+* | 445667f nit: add space after parenthesis
+* | a615b51 Remove hacky js for asciinemas
+* | 9d87523 Fix autoplay on mobile
+* | 66eb47e Redo demos using videos and outside comments
+* | 760b722 Minor fix for inline code blocks
+* | 6825f5b Import fonts, increase font & add dark theme
+* | 31ab1f8 Include asciicasts in the about page
+* | 6befbeb Add lecture time and location
+* | 4aa671a Add description and partial info for 2020
+* | 51699de Change color scheme
+* | 6ddb4ee Add first draft of 'about the class' blog post
+|/  
+* 1bdc8e5 Update dependencies
+* c84c0e4 Begin transition to new name and domain
+* 39c9a12 Update information related to rsync.net
+*   7364971 Merge pull request #12 from 01programs/patch-2
+|\  
+| * ae852b4 fix typo
+|/  
+* 062fa05 Update notes on encrypted filesystems
+* 3957f9f Add notes on append only backups
+*   7a274ba Merge branch 'chrisamurao/patch-1'
+|\  
+| * 13eeeae Fixed typo on tampermonkey
+|/  
+*   e79d77f Merge branch 'JohnPhamous/patch-1'
+|\  
+| * 40a0da6 Fixing typo to make example clear
+|/  
+*   37a992f Merge branch 'Offpics/patch-1'
+|\  
+| * 67587ab Fix spelling
+|/  
+* 9763cc8 New Shell and Scripting video
+* f51c8f2 Restore note about videos/notes
+* 3885dec Do capitalization manually
+* 0ad0e0a Add topic list to front page
+* f2348b7 Make lectures page backed by data file
+* 207896f Slightly nicer formatting
+* c01f424 Mention r/hackertools in the list too
+* 48a63b9 Try to make front page easier to navigate
+* 33d6420 Add ref to gmail backups
+*   1a50c48 Merge branch 'HerrKlemmy/patch-1'
+|\  
+| * 7c6ae71 Update virtual-machines.md
+|/  
+* 50d9a28 Add Public APIs ref
+* 24a84a4 Mention backup e-mail
+* db1299a Add r/hackertools links and remove Piazza links
+*   f2dd652 Merge pull request #4 from muellermarkus/patch-1
+|\  
+| * 917b765 Typo in command-line.md
+* |   adce6b0 Merge pull request #6 from immanuelfodor/master
+|\ \  
+| |/  
+|/|   
+| * def310a Merge pull request #1 from immanuelfodor/immanuelfodor-shell-md
+|/| 
+| * 75732a7 Replace the dummy file to the actual script + typo
+|/  
+*   aeb96a8 Merge branch 'apengwin/patch-1'
+|\  
+| * ea9df7a typo hehe
+|/  
+*   ae149eb Merge branch 'gvre/master'
+|\  
+| * 801159e Remove quotes
+* | 0ce3e27 Add link to edit current lecture page
+* | a4f3dc5 Merge branch 'gvre/master'
+|\| 
+| * 5536325 Remove quotes from variable
+|/  
+* 119eb2e Remove subtitle
+* 47ba3df Make it more obvious that the class is over
+* 5b0a5e5 Make it more obvious that there are videos
+* 67adfc4 Link to shared locations
+* 6255f8f Link to https://www.securemessagingapps.com/
+* f1a4167 Mention more password managers
+* e9b1ae4 Fix aspect ratios
+* d4cfc27 Add videos
+* 3a6a1e6 Add favicons
+* f1652c5 Update README
+* 24224c3 Fix typo
+* 0889ae3 USB data blockers
+* 258d198 Add security lecture notes
+* 1f76dcf Update schedule
+* 8ef9b07 Add note on Karabiner
+* 2bcc6ed Add text on OS customization
+* 2ea9d5f Tweak text
+* 7e83244 Add some text on package management
+* b1d8912 Write web lecture notes
+* 025a079 Write Remote Machine Lecture
+* dec2435 Add todo for automation
+* e760d82 Add more exercises shell
+* 3ea5fe1 Draft remote machine contents
+* 886fc02 Add more git exercises
+* 2118243 Add notes for future automation topics
+* 70cd8ed Draft os-customization exercises and reference
+* f15e23b Draft security topics and exercises
+* 9be5396 Minor comments about editors
+* 8a8965c Add minor comments to dotfiles
+* e3468be Add rename exercise
+* fcafb18 Make exercises use number bullets
+* 532a636 Update schedule
+* da13634 Add note
+* 5a12916 Write notes for automation
+* a94a05c Move remotes lecture
+* ea57396 Rename automation lecture
+* 0de372c Remove title from cli environment
+* 202602a Finish lecture content for machine introspection
+* bd862f7 Add rsync/rclone
+*   574785d Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 6c6c98c machine introspection outline
+* | 98e0bcf Fix typos in backups
+* | 7ca833f Add backup resources and exercises
+* | 599c6bb Include extra bk considerations and web backup
+* | 0b893bd Write backup notes
+|/  
+* 728daa3 Add more content
+* 8be73c4 Add more on debuggers
+* 03cc4ae Add GDB
+* f360cd1 Add link to dotfiles repositories
+* ae7726c Add more content
+* 14a48f0 Some version control exercises
+* c954bf9 Add mention of buffers
+* edf3b0c Fix typos
+* 435e67d Update
+* e93a517 Add bash
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+* b95bf11 Fix some typos in shell
+* 2b56220 Add extra exercises for shell
+*   5222ef0 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 8ff7b6a Fix
+| * a94dfa3 Fix formatting
+| * d9776d7 Update dependencies
+| * 823ae56 vim doesn't like shell as the code type
+* | 4f98428 Add some exercises for shell
+|/  
+* 5f96879 Add extra stuff for VM & containers
+*   ef07ae6 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 839b2d5 Update
+| * e2c7e67 Update
+| * acfe105 Text on containers
+| * cf835d2 List presenters
+| * 792cd3a Update
+| * 6b418f5 Add Piazza link
+| * 89bcac6 Mention some special vars
+| * e8ab859 Add dotfiles content
+| * 773fecb Fix parsing
+| * 0adbe59 First draft of shell lecture
+* | a524147 Add under-construction page
+|/  
+* 86f74ec Add content for VMs
+* eb14a91 Add some intro content
+* db290a4 Add nicer message
+* ccd5a83 Acknowledge sponsors
+* ffa24fb Add schedule and empty pages for topics
+* b2e3a22 Add basic course info
+* 112ddbd Initial commit
+(END)
+* ae7726c Add more content
+* 14a48f0 Some version control exercises
+* c954bf9 Add mention of buffers
+* edf3b0c Fix typos
+* 435e67d Update
+* e93a517 Add bash
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+* b95bf11 Fix some typos in shell
+* 2b56220 Add extra exercises for shell
+*   5222ef0 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 8ff7b6a Fix
+| * a94dfa3 Fix formatting
+| * d9776d7 Update dependencies
+| * 823ae56 vim doesn't like shell as the code type
+* | 4f98428 Add some exercises for shell
+|/  
+* 5f96879 Add extra stuff for VM & containers
+*   ef07ae6 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 839b2d5 Update
+| * e2c7e67 Update
+| * acfe105 Text on containers
+| * cf835d2 List presenters
+| * 792cd3a Update
+| * 6b418f5 Add Piazza link
+| * 89bcac6 Mention some special vars
+| * e8ab859 Add dotfiles content
+| * 773fecb Fix parsing
+| * 0adbe59 First draft of shell lecture
+* | a524147 Add under-construction page
+|/  
+* 86f74ec Add content for VMs
+* eb14a91 Add some intro content
+* db290a4 Add nicer message
+* ccd5a83 Acknowledge sponsors
+:
+* ae7726c Add more content
+* 14a48f0 Some version control exercises
+* c954bf9 Add mention of buffers
+* edf3b0c Fix typos
+* 435e67d Update
+* e93a517 Add bash
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+* b95bf11 Fix some typos in shell
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+* b95bf11 Fix some typos in shell
+* 2b56220 Add extra exercises for shell
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+* b95bf11 Fix some typos in shell
+* 2b56220 Add extra exercises for shell
+*   5222ef0 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+* b95bf11 Fix some typos in shell
+* 2b56220 Add extra exercises for shell
+*   5222ef0 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+* b95bf11 Fix some typos in shell
+* 2b56220 Add extra exercises for shell
+*   5222ef0 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 8ff7b6a Fix
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+* b95bf11 Fix some typos in shell
+* 2b56220 Add extra exercises for shell
+*   5222ef0 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 8ff7b6a Fix
+| * a94dfa3 Fix formatting
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+* b95bf11 Fix some typos in shell
+* 2b56220 Add extra exercises for shell
+*   5222ef0 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 8ff7b6a Fix
+| * a94dfa3 Fix formatting
+| * d9776d7 Update dependencies
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+* b95bf11 Fix some typos in shell
+* 2b56220 Add extra exercises for shell
+*   5222ef0 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 8ff7b6a Fix
+| * a94dfa3 Fix formatting
+| * d9776d7 Update dependencies
+| * 823ae56 vim doesn't like shell as the code type
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+* b95bf11 Fix some typos in shell
+* 2b56220 Add extra exercises for shell
+*   5222ef0 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 8ff7b6a Fix
+| * a94dfa3 Fix formatting
+| * d9776d7 Update dependencies
+| * 823ae56 vim doesn't like shell as the code type
+* | 4f98428 Add some exercises for shell
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+* b95bf11 Fix some typos in shell
+* 2b56220 Add extra exercises for shell
+*   5222ef0 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 8ff7b6a Fix
+| * a94dfa3 Fix formatting
+| * d9776d7 Update dependencies
+| * 823ae56 vim doesn't like shell as the code type
+* | 4f98428 Add some exercises for shell
+|/  
+* 5f96879 Add extra stuff for VM & containers
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+* b95bf11 Fix some typos in shell
+* 2b56220 Add extra exercises for shell
+*   5222ef0 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 8ff7b6a Fix
+| * a94dfa3 Fix formatting
+| * d9776d7 Update dependencies
+| * 823ae56 vim doesn't like shell as the code type
+* | 4f98428 Add some exercises for shell
+|/  
+* 5f96879 Add extra stuff for VM & containers
+*   ef07ae6 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+* b95bf11 Fix some typos in shell
+* 2b56220 Add extra exercises for shell
+*   5222ef0 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 8ff7b6a Fix
+| * a94dfa3 Fix formatting
+| * d9776d7 Update dependencies
+| * 823ae56 vim doesn't like shell as the code type
+* | 4f98428 Add some exercises for shell
+|/  
+* 5f96879 Add extra stuff for VM & containers
+*   ef07ae6 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+* b95bf11 Fix some typos in shell
+* 2b56220 Add extra exercises for shell
+*   5222ef0 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 8ff7b6a Fix
+| * a94dfa3 Fix formatting
+| * d9776d7 Update dependencies
+| * 823ae56 vim doesn't like shell as the code type
+* | 4f98428 Add some exercises for shell
+|/  
+* 5f96879 Add extra stuff for VM & containers
+*   ef07ae6 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 839b2d5 Update
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+* b95bf11 Fix some typos in shell
+* 2b56220 Add extra exercises for shell
+*   5222ef0 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 8ff7b6a Fix
+| * a94dfa3 Fix formatting
+| * d9776d7 Update dependencies
+| * 823ae56 vim doesn't like shell as the code type
+* | 4f98428 Add some exercises for shell
+|/  
+* 5f96879 Add extra stuff for VM & containers
+*   ef07ae6 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 839b2d5 Update
+| * e2c7e67 Update
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+* b95bf11 Fix some typos in shell
+* 2b56220 Add extra exercises for shell
+*   5222ef0 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 8ff7b6a Fix
+| * a94dfa3 Fix formatting
+| * d9776d7 Update dependencies
+| * 823ae56 vim doesn't like shell as the code type
+* | 4f98428 Add some exercises for shell
+|/  
+* 5f96879 Add extra stuff for VM & containers
+*   ef07ae6 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 839b2d5 Update
+| * e2c7e67 Update
+| * acfe105 Text on containers
+| * cf835d2 List presenters
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+* b95bf11 Fix some typos in shell
+* 2b56220 Add extra exercises for shell
+*   5222ef0 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 8ff7b6a Fix
+| * a94dfa3 Fix formatting
+| * d9776d7 Update dependencies
+| * 823ae56 vim doesn't like shell as the code type
+* | 4f98428 Add some exercises for shell
+|/  
+* 5f96879 Add extra stuff for VM & containers
+*   ef07ae6 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 839b2d5 Update
+| * e2c7e67 Update
+| * acfe105 Text on containers
+| * cf835d2 List presenters
+| * 792cd3a Update
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+* b95bf11 Fix some typos in shell
+* 2b56220 Add extra exercises for shell
+*   5222ef0 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 8ff7b6a Fix
+| * a94dfa3 Fix formatting
+| * d9776d7 Update dependencies
+| * 823ae56 vim doesn't like shell as the code type
+* | 4f98428 Add some exercises for shell
+|/  
+* 5f96879 Add extra stuff for VM & containers
+*   ef07ae6 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 839b2d5 Update
+| * e2c7e67 Update
+| * acfe105 Text on containers
+| * cf835d2 List presenters
+| * 792cd3a Update
+| * 6b418f5 Add Piazza link
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+* b95bf11 Fix some typos in shell
+* 2b56220 Add extra exercises for shell
+*   5222ef0 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 8ff7b6a Fix
+| * a94dfa3 Fix formatting
+| * d9776d7 Update dependencies
+| * 823ae56 vim doesn't like shell as the code type
+* | 4f98428 Add some exercises for shell
+|/  
+* 5f96879 Add extra stuff for VM & containers
+*   ef07ae6 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 839b2d5 Update
+| * e2c7e67 Update
+| * acfe105 Text on containers
+| * cf835d2 List presenters
+| * 792cd3a Update
+| * 6b418f5 Add Piazza link
+| * 89bcac6 Mention some special vars
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+* b95bf11 Fix some typos in shell
+* 2b56220 Add extra exercises for shell
+*   5222ef0 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 8ff7b6a Fix
+| * a94dfa3 Fix formatting
+| * d9776d7 Update dependencies
+| * 823ae56 vim doesn't like shell as the code type
+* | 4f98428 Add some exercises for shell
+|/  
+* 5f96879 Add extra stuff for VM & containers
+*   ef07ae6 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 839b2d5 Update
+| * e2c7e67 Update
+| * acfe105 Text on containers
+| * cf835d2 List presenters
+| * 792cd3a Update
+| * 6b418f5 Add Piazza link
+| * 89bcac6 Mention some special vars
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+* b95bf11 Fix some typos in shell
+* 2b56220 Add extra exercises for shell
+*   5222ef0 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 8ff7b6a Fix
+| * a94dfa3 Fix formatting
+| * d9776d7 Update dependencies
+| * 823ae56 vim doesn't like shell as the code type
+* | 4f98428 Add some exercises for shell
+|/  
+* 5f96879 Add extra stuff for VM & containers
+*   ef07ae6 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 839b2d5 Update
+| * e2c7e67 Update
+| * acfe105 Text on containers
+| * cf835d2 List presenters
+| * 792cd3a Update
+| * 6b418f5 Add Piazza link
+| * 89bcac6 Mention some special vars
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+* b95bf11 Fix some typos in shell
+* 2b56220 Add extra exercises for shell
+*   5222ef0 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 8ff7b6a Fix
+| * a94dfa3 Fix formatting
+| * d9776d7 Update dependencies
+| * 823ae56 vim doesn't like shell as the code type
+* | 4f98428 Add some exercises for shell
+|/  
+* 5f96879 Add extra stuff for VM & containers
+*   ef07ae6 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 839b2d5 Update
+| * e2c7e67 Update
+| * acfe105 Text on containers
+| * cf835d2 List presenters
+| * 792cd3a Update
+| * 6b418f5 Add Piazza link
+| * 89bcac6 Mention some special vars
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+* b95bf11 Fix some typos in shell
+* 2b56220 Add extra exercises for shell
+*   5222ef0 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 8ff7b6a Fix
+| * a94dfa3 Fix formatting
+| * d9776d7 Update dependencies
+| * 823ae56 vim doesn't like shell as the code type
+* | 4f98428 Add some exercises for shell
+|/  
+* 5f96879 Add extra stuff for VM & containers
+*   ef07ae6 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 839b2d5 Update
+| * e2c7e67 Update
+| * acfe105 Text on containers
+| * cf835d2 List presenters
+| * 792cd3a Update
+| * 6b418f5 Add Piazza link
+| * 89bcac6 Mention some special vars
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+* b95bf11 Fix some typos in shell
+* 2b56220 Add extra exercises for shell
+*   5222ef0 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 8ff7b6a Fix
+| * a94dfa3 Fix formatting
+| * d9776d7 Update dependencies
+| * 823ae56 vim doesn't like shell as the code type
+* | 4f98428 Add some exercises for shell
+|/  
+* 5f96879 Add extra stuff for VM & containers
+*   ef07ae6 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 839b2d5 Update
+| * e2c7e67 Update
+| * acfe105 Text on containers
+| * cf835d2 List presenters
+| * 792cd3a Update
+| * 6b418f5 Add Piazza link
+| * 89bcac6 Mention some special vars
+:
+* c74c87e Comment out section that has no content
+* 5aecb5b Add lecture notes for editors
+* 84e1e07 Some more vcs content + start of exercise list
+* 624fb92 a start for vcs
+* 04864bd Add note
+* 7a5440b Add link to website source code
+* fc09343 Fix highlight background bleeding outside border
+* 0e84862 More data wrangling
+* b8f3c92 Add terminal emulators/multiplex to command-line
+* 32f6d86 More data sets
+* 4b4da7e More data wrangling exercises
+* afd95e4 Add some data wrangling exercises
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+* b95bf11 Fix some typos in shell
+* 2b56220 Add extra exercises for shell
+*   5222ef0 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 8ff7b6a Fix
+| * a94dfa3 Fix formatting
+| * d9776d7 Update dependencies
+| * 823ae56 vim doesn't like shell as the code type
+* | 4f98428 Add some exercises for shell
+|/  
+* 5f96879 Add extra stuff for VM & containers
+*   ef07ae6 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 839b2d5 Update
+| * e2c7e67 Update
+| * acfe105 Text on containers
+| * cf835d2 List presenters
+| * 792cd3a Update
+| * 6b418f5 Add Piazza link
+| * 89bcac6 Mention some special vars
+| * e8ab859 Add dotfiles content
+| * 773fecb Fix parsing
+| * 0adbe59 First draft of shell lecture
+* | a524147 Add under-construction page
+|/  
+* 86f74ec Add content for VMs
+* eb14a91 Add some intro content
+* db290a4 Add nicer message
+* ccd5a83 Acknowledge sponsors
+* ffa24fb Add schedule and empty pages for topics
+* b2e3a22 Add basic course info
+* 112ddbd Initial commit
+(END)
+* 86be195 Lecture notes from data wrangling
+* 927cd6c Initial draft of command-line.md
+* 03cb3cb Add note
+* 44e73b7 Add note from Jon
+* 4a4d7b9 Add link from Jose
+* 0346eba Fix error exercise
+*   c98cc55 Merge remote-tracking branch 'origin/master'
+|\  
+| *   ebb86ba Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+| |\  
+| * | e801245 Fix shell explanation
+* | | 6de1157 Fix numbering
+| |/  
+|/|   
+* | 0593083 More Piazza
+|/  
+* b95bf11 Fix some typos in shell
+* 2b56220 Add extra exercises for shell
+*   5222ef0 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 8ff7b6a Fix
+| * a94dfa3 Fix formatting
+| * d9776d7 Update dependencies
+| * 823ae56 vim doesn't like shell as the code type
+* | 4f98428 Add some exercises for shell
+|/  
+* 5f96879 Add extra stuff for VM & containers
+*   ef07ae6 Merge branch 'master' of github.com:hacker-tools/hacker-tools.github.io
+|\  
+| * 839b2d5 Update
+| * e2c7e67 Update
+| * acfe105 Text on containers
+| * cf835d2 List presenters
+| * 792cd3a Update
+| * 6b418f5 Add Piazza link
+| * 89bcac6 Mention some special vars
+| * e8ab859 Add dotfiles content
+| * 773fecb Fix parsing
+| * 0adbe59 First draft of shell lecture
+* | a524147 Add under-construction page
+|/  
+* 86f74ec Add content for VMs
+* eb14a91 Add some intro content
+* db290a4 Add nicer message
+* ccd5a83 Acknowledge sponsors
+* ffa24fb Add schedule and empty pages for topics
+* b2e3a22 Add basic course info
+* 112ddbd Initial commit
+
+uliana@ulianas-macbook-pro _2020 % git config --global core.excludesfile ~/.gitignore_global
+
+uliana@ulianas-macbook-pro _2020 % nano ~/.gitignore_global
+uliana@ulianas-macbook-pro _2020 % git starus
+git: 'starus' is not a git command. See 'git --help'.
+
+The most similar command is
+	status
+uliana@ulianas-macbook-pro _2020 % git status
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   last-modified.txt
+
+uliana@ulianas-macbook-pro _2020 % man ls
+Unknown locale, assuming C
+uliana@ulianas-macbook-pro _2020 % history > a.txt
+uliana@ulianas-macbook-pro _2020 % cat a.txt 
+ 1182  git status
+ 1183  git stash
+ 1184  rm semester
+ 1185  git status
+ 1186  git add last-modified.txt
+ 1187  git stash
+ 1188  git log --all --oneline
+ 1189  git stash pop
+ 1190  git config --global alias.graph "log --all --graph --decorate --oneline"\n
+ 1191  git graph\n
+ 1192  git config --global core.excludesfile ~/.gitignore_global\n
+ 1193  nano ~/.gitignore_global
+ 1194  git starus
+ 1195  git status
+ 1196  ls man
+ 1197  man ls
+uliana@ulianas-macbook-pro _2020 % vi a.txt 
+uliana@ulianas-macbook-pro _2020 % history -h
+history: bad option: -h
+uliana@ulianas-macbook-pro _2020 % history -H
+history: bad option: -H
+uliana@ulianas-macbook-pro _2020 % history --help
+history: bad option: -h
+uliana@ulianas-macbook-pro _2020 % man history   
+Unknown locale, assuming C
+uliana@ulianas-macbook-pro _2020 % history 
+ 1189  git stash pop
+ 1190  git config --global alias.graph "log --all --graph --decorate --oneline"\n
+ 1191  git graph\n
+ 1192  git config --global core.excludesfile ~/.gitignore_global\n
+ 1193  nano ~/.gitignore_global
+ 1194  git starus
+ 1195  git status
+ 1196  ls man
+ 1197  man ls
+ 1198  history > a.txt
+ 1199  cat a.txt
+ 1200  vi a.txt
+ 1201  history -h
+ 1202  history -H
+ 1203  history --help
+ 1204  man history
+uliana@ulianas-macbook-pro _2020 % ls -alht --color=auto
+total 536
+drwxr-xr-x  18 uliana  staff   576B Mar 10 12:53 .
+-rw-r--r--   1 uliana  staff   438B Mar 10 12:51 a.txt
+-rw-r--r--   1 uliana  staff   626B Mar  9 17:53 last-modified.txt
+drwxr-xr-x  28 uliana  staff   896B Mar  9 16:34 ..
+-rw-r--r--   1 uliana  staff    22K Mar  9 16:34 version-control.md
+-rw-r--r--   1 uliana  staff    23K Mar  9 16:34 shell-tools.md
+-rw-r--r--   1 uliana  staff    17K Mar  9 16:34 security.md
+-rw-r--r--   1 uliana  staff    24K Mar  9 16:34 qa.md
+-rw-r--r--   1 uliana  staff    23K Mar  9 16:34 potpourri.md
+-rw-r--r--   1 uliana  staff    15K Mar  9 16:34 metaprogramming.md
+-rw-r--r--   1 uliana  staff   1.3K Mar  9 16:34 index.html
+drwxr-xr-x   4 uliana  staff   128B Mar  9 16:34 files
+-rw-r--r--   1 uliana  staff    18K Mar  9 16:34 editors.md
+-rw-r--r--   1 uliana  staff   3.9K Mar  9 16:34 editors-notes.txt
+-rw-r--r--   1 uliana  staff    32K Mar  9 16:34 debugging-profiling.md
+-rw-r--r--   1 uliana  staff    18K Mar  9 16:34 data-wrangling.md
+-rw-r--r--   1 uliana  staff    17K Mar  9 16:34 course-shell.md
+-rw-r--r--   1 uliana  staff    27K Mar  9 16:34 command-line.md
+uliana@ulianas-macbook-pro _2020 % nano
+uliana@ulianas-macbook-pro _2020 % nano
+uliana@ulianas-macbook-pro _2020 % find . -type f -name '*.html' -print0 | xargs -0 zip archive.zip
+  adding: index.html (deflated 51%)
+uliana@ulianas-macbook-pro _2020 % find . -type f -exec stat -f "%m %N" {} \; | sort -nr | head -n 1
+1741618615 ./archive.zip
+uliana@ulianas-macbook-pro _2020 % find . -type f -exec stat -f "%m %N" {} \; | sort -nr
+1741618615 ./archive.zip
+1741604332 ./until_fail.sh
+1741603345 ./marco.sh
+1741596713 ./a.txt
+1741528420 ./last-modified.txt
+1741523658 ./version-control.md
+1741523658 ./shell-tools.md
+1741523658 ./security.md
+1741523658 ./qa.md
+1741523658 ./potpourri.md
+1741523658 ./metaprogramming.md
+1741523658 ./index.html
+1741523658 ./files/vimrc
+1741523658 ./files/example-data.xml
+1741523658 ./editors.md
+1741523658 ./editors-notes.txt
+1741523658 ./debugging-profiling.md
+1741523658 ./data-wrangling.md
+1741523658 ./course-shell.md
+1741523658 ./command-line.md
+uliana@ulianas-macbook-pro _2020 % history
+ 1197  man ls
+ 1198  history > a.txt
+ 1199  cat a.txt
+ 1200  vi a.txt
+ 1201  history -h
+ 1202  history -H
+ 1203  history --help
+ 1204  man history
+ 1205  history
+ 1206  ls -alht --color=auto
+ 1207  nano
+ 1208  nano
+ 1209  find . -type f -name '*.html' -print0 | xargs -0 zip archive.zip
+ 1210  ind . -type f -exec stat -f "%m %N" {} \; | sort -nr | head -n 1
+ 1211  find . -type f -exec stat -f "%m %N" {} \; | sort -nr | head -n 1
+ 1212  find . -type f -exec stat -f "%m %N" {} \; | sort -nr
+uliana@ulianas-macbook-pro _2020 % history | sed -n '/^ *1100 /,$p'
+uliana@ulianas-macbook-pro _2020 % history > ~/MSAI/python/missing-semester/_2020/my_history.txt
+uliana@ulianas-macbook-pro _2020 % ls
+a.txt			debugging-profiling.md	last-modified.txt	qa.md
+archive.zip		editors-notes.txt	marco.sh		security.md
+command-line.md		editors.md		metaprogramming.md	shell-tools.md
+course-shell.md		files			my_history.txt		until_fail.sh
+data-wrangling.md	index.html		potpourri.md		version-control.md
+uliana@ulianas-macbook-pro _2020 % nano my_history.txt 
+uliana@Ulianas-MacBook-Pro _2020 % git remote set-url origin https://github.com/uliana-mityusheva/missing-semester
+uliana@Ulianas-MacBook-Pro _2020 % git remote -v
+origin	https://github.com/uliana-mityusheva/missing-semester (fetch)
+origin	https://github.com/uliana-mityusheva/missing-semester (push)
+uliana@Ulianas-MacBook-Pro _2020 % git remote add upstream https://github.com/aniervs/missing-semester.git
+uliana@Ulianas-MacBook-Pro _2020 % git fetch upstream
+remote: Enumerating objects: 2370, done.
+remote: Counting objects: 100% (2348/2348), done.
+remote: Compressing objects: 100% (930/930), done.
+remote: Total 2324 (delta 1431), reused 1757 (delta 1341), pack-reused 0 (from 0)
+Receiving objects: 100% (2324/2324), 5.20 MiB | 2.22 MiB/s, done.
+Resolving deltas: 100% (1431/1431), completed with 8 local objects.
+From https://github.com/aniervs/missing-semester
+ * [new branch]      master     -> upstream/master
+uliana@Ulianas-MacBook-Pro _2020 % git status       
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   last-modified.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	a.txt
+	archive.zip
+	marco.sh
+	until_fail.sh
+
+

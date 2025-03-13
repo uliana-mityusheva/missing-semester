@@ -1,0 +1,16 @@
+ 1182  git status
+ 1183  git stash
+ 1184  rm semester
+ 1185  git status
+ 1186  git add last-modified.txt
+ 1187  git stash
+ 1188  git log --all --oneline
+ 1189  git stash pop
+ 1190  git config --global alias.graph "log --all --graph --decorate --oneline"\n
+ 1191  git graph\n
+ 1192  git config --global core.excludesfile ~/.gitignore_global\n
+ 1193  nano ~/.gitignore_global
+ 1194  git starus
+ 1195  git status
+ 1196  ls man
+ 1197  man ls
